@@ -1,649 +1,460 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" id="htmlRoot">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>غسيل سجاد وموكيت بالرياض | خدمات تنظيف احترافية</title>
-    <meta name="description" content="شركة متخصصة في غسيل السجاد والموكيت والمفروشات بالرياض. خدمات تنظيف احترافية مع الاستلام والتوصيل.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
-    <link id="bootstrapStyles" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">نقاء | غسيل سجاد وموكيت في الرياض</title>
+<meta id="pageDesc" name="description" content="شركة متخصصة في غسيل السجاد والموكيت والمفروشات في الرياض. خدمات تنظيف احترافية، معالجة البقع والروائح، التعقيم، والاستلام والتوصيل.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favico/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favico/apple-touch-icon.png">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold text-dark-blue fs-4" href="#">
-                <i class="bi bi-droplet-half text-primary-blue me-1"></i> لين برو كلين
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-semibold">
-                    <li class="nav-item"><a class="nav-link text-dark" href="#home">الرئيسية</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="#why-us">لماذا تختارنا؟</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="#services">خدماتنا</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="#process">كيف نعمل</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="#sectors">القطاعات</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="#faq">الأسئلة الشائعة</a></li>
-                </ul>
-                <button id="languageToggle" type="button" class="btn btn-outline-secondary btn-sm rounded-pill px-3 fw-bold me-2" onclick="toggleLanguage()" aria-label="Switch to English">
-                    <i class="bi bi-globe me-1"></i> English
-                </button>
-                
-                <a href="#quote-form" class="btn btn-primary-blue btn-sm">اطلب الخدمة الآن</a>
-            </div>
-        </div>
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <img class="brand-mark" src="assets/Logonobg.png" alt="Leem Pro Clean — شركة ليم برو كلين">
+    </div>
+    <nav>
+      <ul class="nav-center" id="navLinks">
+        <li><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+        <li><a href="#about" data-ar="من نحن" data-en="About">من نحن</a></li>
+        <li><a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a></li>
+        <li><a href="#process" data-ar="كيف نعمل" data-en="How it works">كيف نعمل</a></li>
+        <li><a href="#faq" data-ar="الأسئلة الشائعة" data-en="FAQ">الأسئلة الشائعة</a></li>
+        <li><a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a></li>
+      </ul>
     </nav>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button type="button" id="btnAr" class="active">AR</button>
+        <button type="button" id="btnEn">EN</button>
+      </div>
+      <a href="#quote" class="nav-cta" data-ar="اطلب عرض سعر" data-en="Get a quote">اطلب عرض سعر</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
 
-    <section id="home" class="hero-section">
-        <div class="container text-center text-lg-start">
-            <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <span class="badge bg-white text-primary-blue border px-3 py-2 rounded-pill mb-3 fw-bold shadow-sm">
-                        <i class="bi bi-stars"></i> نظافة احترافية وعناية متكاملة
-                    </span>
-                    <h1 class="display-4 fw-bold text-dark-blue mb-3">نظافة احترافية… تعيد لمفروشاتك رونقها</h1>
-                    <p class="lead text-muted mb-4 fs-5">
-                        نقدم خدمات متخصصة في غسيل السجاد والموكيت والمفروشات باستخدام أساليب تنظيف احترافية ومواد مصممة للعناية بالألياف والأقمشة، مع عناية دقيقة بكل قطعة من لحظة استلامها وحتى تسليمها.
-                    </p>
-                    <p class="fw-bold text-primary-blue mb-4">نعتني بالتفاصيل… لأن الفرق يظهر في التفاصيل.</p>
-                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-                        <a href="#quote-form" class="btn btn-primary-blue btn-lg">اطلب الخدمة الآن</a>
-                        <button onclick="openWhatsApp('مرحبًا، أرغب في الاستفسار عن خدمات غسيل السجاد والموكيت والحصول على عرض سعر.')" class="btn btn-whatsapp btn-lg">
-                            <i class="bi bi-whatsapp me-2"></i> تواصل عبر واتساب
-                        </button>
-                    </div>
-                </div>
-                <div class="col-lg-5 mt-5 mt-lg-0 text-center">
-                    <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=800&q=80" alt="Carpet Cleaning" class="hero-img">
-                </div>
-            </div>
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+  <div class="hero-body">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="eyebrow"><svg class="diamond" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><span data-ar="غسيل السجاد والموكيت والمفروشات" data-en="Carpet, Carpet-tile &amp; Upholstery Cleaning">غسيل السجاد والموكيت والمفروشات</span></div>
+        <h1 data-ar-html="نظافة احترافية… تعيد لمفروشاتك <span class=&quot;accent&quot;>روقانها</span>" data-en-html="Professional cleaning that brings your fabrics back to <span class=&quot;accent&quot;>life</span>">نظافة احترافية… تعيد لمفروشاتك <span class="accent">رونقها</span></h1>
+        <p class="hero-sub" data-ar="نقدّم خدمات متخصصة في غسيل السجاد والموكيت والمفروشات باستخدام أساليب تنظيف احترافية ومواد مصممة للعناية بالألياف والأقمشة، مع عناية دقيقة بكل قطعة من لحظة استلامها وحتى تسليمها. نعتني بالتفاصيل… لأن الفرق يظهر في التفاصيل." data-en="We offer specialized carpet, carpet-tile and upholstery cleaning using professional methods and products designed to care for fibres and fabrics, with close attention to every piece from pickup to delivery. We mind the details — because that's where the difference shows.">نقدّم خدمات متخصصة في غسيل السجاد والموكيت والمفروشات باستخدام أساليب تنظيف احترافية ومواد مصممة للعناية بالألياف والأقمشة، مع عناية دقيقة بكل قطعة من لحظة استلامها وحتى تسليمها. نعتني بالتفاصيل… لأن الفرق يظهر في التفاصيل.</p>
+        <div class="hero-actions">
+          <a href="#quote" class="btn btn-solid" data-ar="اطلب الخدمة الآن" data-en="Book a service">اطلب الخدمة الآن</a>
+          <a href="#contact" class="btn btn-outline" data-ar="تواصل معنا عبر واتساب" data-en="Message us on WhatsApp">تواصل معنا عبر واتساب</a>
         </div>
-    </section>
+      </div>
+      <div class="hero-art">
+       <h2 class="accent" data-ar="نقاء تلمسه..." data-en="Purity you can feel...">نقاء تلمسه...</h2>
+<h2 class="accent-white" data-ar="و اهتمام تثق به" data-en="and care you can trust">و اهتمام تثق به</h2>
+        <img src="assets/hero-carpet.png" alt="غسيل السجاد والموكيت والمفروشات" width="100%" height="auto">
+      
+    </div>
+  </div>
+  <div class="sadu-strip sadu-strip--dark"></div>
+</section>
 
-    <section id="why-us" class="py-5">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold text-dark-blue">لماذا تختارنا؟</h2>
-                <p class="text-muted fs-5">لأن سجادك يستحق أكثر من مجرد غسيل تقليدي</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="feature-card p-4 h-100">
-                        <div class="icon-box"><i class="bi bi-sparkles"></i></div>
-                        <h5 class="fw-bold text-dark-blue">عناية احترافية</h5>
-                        <p class="text-muted m-0">نتعامل مع كل قطعة وفق نوع الألياف والخامة ودرجة الاتساخ لضمان الحماية الكاملة.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card p-4 h-100">
-                        <div class="icon-box"><i class="bi bi-box-seam"></i></div>
-                        <h5 class="fw-bold text-dark-blue">مواد تنظيف متخصصة</h5>
-                        <p class="text-muted m-0">نستخدم مواد مخصصة للمفروشات والسجاد للحفاظ على سلامة الألوان ونعومة الألياف.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card p-4 h-100">
-                        <div class="icon-box"><i class="bi bi-magic"></i></div>
-                        <h5 class="fw-bold text-dark-blue">إزالة البقع والروائح</h5>
-                        <p class="text-muted m-0">نعمل على معالجة البقع الصعبة والروائح غير المرغوبة باستخدام حلول متطورة.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card p-4 h-100">
-                        <div class="icon-box"><i class="bi bi-wind"></i></div>
-                        <h5 class="fw-bold text-dark-blue">تجفيف احترافي</h5>
-                        <p class="text-muted m-0">نهتم بمرحلة التجفيف الكامل لتقليل الرطوبة ومنع تكون أي روائح أو بكتيريا.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card p-4 h-100">
-                        <div class="icon-box"><i class="bi bi-truck"></i></div>
-                        <h5 class="fw-bold text-dark-blue">استلام وتسليم مريح</h5>
-                        <p class="text-muted m-0">نوفر خدمة استلام وتسليم مريحة لعملائنا وفق نطاق التغطية المتاح بالرياض.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card p-4 h-100">
-                        <div class="icon-box"><i class="bi bi-search"></i></div>
-                        <h5 class="fw-bold text-dark-blue">فحص دقيق للجودة</h5>
-                        <p class="text-muted m-0">تمر جميع القطع بمرحلة فحص شاملة للتأكد من الجودة والنظافة قبل التسليم.</p>
-                    </div>
-                </div>
-            </div>
+<!-- ===================== WHY US ===================== -->
+<section id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker"><svg class="diamond" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><span data-ar="لماذا تختارنا" data-en="Why choose us">لماذا تختارنا</span></div>
+      <h2 data-ar="لأن سجادك يستحق أكثر من مجرد غسيل" data-en="Because your carpet deserves more than a wash">لأن سجادك يستحق أكثر من مجرد غسيل</h2>
+      <p data-ar="نؤمن أن تنظيف السجاد والمفروشات عملية متكاملة، تبدأ بفهم نوع الخامة وتنتهي بفحص دقيق للجودة." data-en="We treat carpet and upholstery cleaning as a complete process — it starts with understanding the material and ends with a careful quality check.">نؤمن أن تنظيف السجاد والمفروشات عملية متكاملة، تبدأ بفهم نوع الخامة وتنتهي بفحص دقيق للجودة.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><svg class="mark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><h3 data-ar="عناية احترافية" data-en="Professional care">عناية احترافية</h3><p data-ar="نتعامل مع كل قطعة وفق نوع الألياف والخامة ودرجة الاتساخ." data-en="We treat every piece according to its fibre type, material and level of soiling.">نتعامل مع كل قطعة وفق نوع الألياف والخامة ودرجة الاتساخ.</p></div>
+      <div class="why-item"><svg class="mark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><h3 data-ar="مواد تنظيف متخصصة" data-en="Specialized products">مواد تنظيف متخصصة</h3><p data-ar="نستخدم مواد مخصصة للمفروشات والسجاد، مع مراعاة الحفاظ على الألوان والألياف." data-en="We use products made for carpets and upholstery, chosen to protect colour and fibre.">نستخدم مواد مخصصة للمفروشات والسجاد، مع مراعاة الحفاظ على الألوان والألياف.</p></div>
+      <div class="why-item"><svg class="mark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><h3 data-ar="إزالة البقع والروائح" data-en="Stain &amp; odour treatment">إزالة البقع والروائح</h3><p data-ar="نعالج البقع والروائح غير المرغوبة باستخدام حلول تنظيف متخصصة." data-en="We treat stubborn stains and unwanted odours with dedicated treatment solutions.">نعالج البقع والروائح غير المرغوبة باستخدام حلول تنظيف متخصصة.</p></div>
+      <div class="why-item"><svg class="mark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><h3 data-ar="تجفيف احترافي" data-en="Professional drying">تجفيف احترافي</h3><p data-ar="نهتم بمرحلة التجفيف لتقليل الرطوبة والحفاظ على جودة السجاد." data-en="We take drying seriously, reducing moisture and protecting carpet quality.">نهتم بمرحلة التجفيف لتقليل الرطوبة والحفاظ على جودة السجاد.</p></div>
+      <div class="why-item"><svg class="mark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><h3 data-ar="استلام وتسليم" data-en="Pickup &amp; delivery">استلام وتسليم</h3><p data-ar="نوفر خدمة استلام وتسليم مريحة لعملائنا وفق نطاق التغطية المتاح." data-en="A convenient pickup and delivery service, within our coverage area.">نوفر خدمة استلام وتسليم مريحة لعملائنا وفق نطاق التغطية المتاح.</p></div>
+      <div class="why-item"><svg class="mark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><h3 data-ar="فحص قبل التسليم" data-en="Pre-delivery check">فحص قبل التسليم</h3><p data-ar="تمر كل قطعة بمرحلة فحص للتأكد من مستوى النظافة والجودة قبل التسليم." data-en="Every piece is inspected for cleanliness and quality before it's returned to you.">تمر كل قطعة بمرحلة فحص للتأكد من مستوى النظافة والجودة قبل التسليم.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="band-cream" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker"><svg class="diamond" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><span data-ar="خدماتنا" data-en="Our services">خدماتنا</span></div>
+      <h2 data-ar="مجموعة كاملة من خدمات العناية بالمفروشات" data-en="A full range of fabric &amp; carpet care services">مجموعة كاملة من خدمات العناية بالمفروشات</h2>
+    </div>
+    <div class="service-list">
+
+      <div class="service-row">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" stroke="currentColor" stroke-width="2"/><path d="M14 18c3 5 3 5 6 0s3-5 6 0 3 5 6 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14 30c3 5 3 5 6 0s3-5 6 0 3 5 6 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <div>
+          <h3 data-ar="غسيل السجاد" data-en="Carpet cleaning">غسيل السجاد</h3>
+          <p data-ar="تنظيف احترافي للسجاد بمختلف أنواعه وخاماته، مع معالجة الاتساخات والبقع والروائح وفق حالة كل قطعة." data-en="Professional cleaning for all carpet types and materials, treating dirt, stains and odours based on the condition of each piece.">تنظيف احترافي للسجاد بمختلف أنواعه وخاماته، مع معالجة الاتساخات والبقع والروائح وفق حالة كل قطعة.</p>
         </div>
-    </section>
+        <a href="#quote" class="service-link" data-ar="اعرف المزيد" data-en="Learn more">اعرف المزيد</a>
+      </div>
 
-    <section id="services" class="py-5 bg-light-blue">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold text-dark-blue">خدماتنا المتخصصة</h2>
-                <p class="text-muted fs-5">حلول تنظيف متكاملة تناسب جميع أنواع المفروشات</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="service-card p-4 h-100 d-flex flex-column justify-content-between">
-                        <div>
-                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" class="service-img mb-4" alt="Carpet Cleaning">
-                            <div class="icon-box"><i class="bi bi-grid-3x3"></i></div>
-                            <h4 class="fw-bold text-dark-blue mb-3">غسيل السجاد</h4>
-                            <p class="text-muted">تنظيف احترافي للسجاد بمختلف أنواعه وخاماته، مع معالجة الاتساخات والبقع والروائح وفق حالة كل قطعة.</p>
-                        </div>
-                        <a href="#quote-form" class="btn btn-outline-primary w-100 mt-3 rounded-pill fw-bold">اطلب الخدمة</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card p-4 h-100 d-flex flex-column justify-content-between">
-                        <div>
-                            <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=600&q=80" class="service-img mb-4" alt="Rug Cleaning">
-                            <div class="icon-box"><i class="bi bi-square-fill"></i></div>
-                            <h4 class="fw-bold text-dark-blue mb-3">غسيل الموكيت</h4>
-                            <p class="text-muted">حلول متخصصة لتنظيف الموكيت في المنازل والمكاتب والمنشآت، مع الاهتمام بإزالة الأوساخ المترسبة.</p>
-                        </div>
-                        <a href="#quote-form" class="btn btn-outline-primary w-100 mt-3 rounded-pill fw-bold">اطلب الخدمة</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card p-4 h-100 d-flex flex-column justify-content-between">
-                        <div>
-                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80" class="service-img mb-4" alt="Upholstery Cleaning">
-                            <div class="icon-box"><i class="bi bi-couch"></i></div>
-                            <h4 class="fw-bold text-dark-blue mb-3">تنظيف المفروشات</h4>
-                            <p class="text-muted">تنظيف وعناية بالمجالس والكنب والمفروشات باستخدام طرق مناسبة لنوع القماش للحفاظ على مظهرها.</p>
-                        </div>
-                        <a href="#quote-form" class="btn btn-outline-primary w-100 mt-3 rounded-pill fw-bold">اطلب الخدمة</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card p-4 h-100 d-flex flex-column justify-content-between">
-                        <div>
-                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80" class="service-img mb-4" alt="Stain Removal">
-                            <div class="icon-box"><i class="bi bi-funnel"></i></div>
-                            <h4 class="fw-bold text-dark-blue mb-3">إزالة البقع</h4>
-                            <p class="text-muted">معالجة متخصصة للبقع المختلفة (قهوة، شاي، زيوت) مع اختيار طرق معالجة تناسب نوع الخامة.</p>
-                        </div>
-                        <a href="#quote-form" class="btn btn-outline-primary w-100 mt-3 rounded-pill fw-bold">اطلب الخدمة</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card p-4 h-100 d-flex flex-column justify-content-between">
-                        <div>
-                            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80" class="service-img mb-4" alt="Odor Removal">
-                            <div class="icon-box"><i class="bi bi-flower1"></i></div>
-                            <h4 class="fw-bold text-dark-blue mb-3">إزالة الروائح</h4>
-                            <p class="text-muted">معالجة مصدر الروائح غير المرغوبة ومنح المفروشات إحساسًا متجددًا بالنظافة والانتعاش.</p>
-                        </div>
-                        <a href="#quote-form" class="btn btn-outline-primary w-100 mt-3 rounded-pill fw-bold">اطلب الخدمة</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card p-4 h-100 d-flex flex-column justify-content-between">
-                        <div>
-                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" class="service-img mb-4" alt="Sanitization and Care">
-                            <div class="icon-box"><i class="bi bi-shield-virus"></i></div>
-                            <h4 class="fw-bold text-dark-blue mb-3">التعقيم والعناية</h4>
-                            <p class="text-muted">خدمات تعقيم وعناية إضافية للمفروشات والسجاد لحمايتها من الميكروبات وضمان بيئة صحية.</p>
-                        </div>
-                        <a href="#quote-form" class="btn btn-outline-primary w-100 mt-3 rounded-pill fw-bold">اطلب الخدمة</a>
-                    </div>
-                </div>
-            </div>
+      <div class="service-row">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none"><path d="M8 40c6-14 12-14 16-24 4 10 10 10 16 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 40h36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <div>
+          <h3 data-ar="غسيل الموكيت" data-en="Carpet-tile cleaning">غسيل الموكيت</h3>
+          <p data-ar="حلول متخصصة لتنظيف الموكيت في المنازل والمكاتب والمنشآت، مع الاهتمام بإزالة الأوساخ والروائح والمحافظة على مظهر الموكيت." data-en="Dedicated wall-to-wall carpet cleaning for homes, offices and facilities, removing dirt and odours while preserving its appearance.">حلول متخصصة لتنظيف الموكيت في المنازل والمكاتب والمنشآت، مع الاهتمام بإزالة الأوساخ والروائح والمحافظة على مظهر الموكيت.</p>
         </div>
-    </section>
+        <a href="#quote" class="service-link" data-ar="اعرف المزيد" data-en="Learn more">اعرف المزيد</a>
+      </div>
 
-    <section id="process" class="process-section py-5">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold text-dark-blue">كيف نعمل؟</h2>
-                <p class="text-muted fs-5">خطوات منظمة تضمن أعلى معايير الجودة</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-3 col-6">
-                    <div class="text-center">
-                        <div class="step-number mx-auto">1</div>
-                        <h6 class="fw-bold">اطلب الخدمة</h6>
-                        <p class="text-muted small">تواصل معنا وأرسل التفاصيل</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="text-center">
-                        <div class="step-number mx-auto">2</div>
-                        <h6 class="fw-bold">الاستلام</h6>
-                        <p class="text-muted small">نستلم السجاد من موقعك</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="text-center">
-                        <div class="step-number mx-auto">3</div>
-                        <h6 class="fw-bold">الفحص والتقييم</h6>
-                        <p class="text-muted small">تحديد الخامة وطريقة التنظيف</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="text-center">
-                        <div class="step-number mx-auto">4</div>
-                        <h6 class="fw-bold">المعالجة والتنظيف</h6>
-                        <p class="text-muted small">استخدام مواد ومعدات مخصصة</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-6 mt-md-4">
-                    <div class="text-center">
-                        <div class="step-number mx-auto">5</div>
-                        <h6 class="fw-bold">التجفيف</h6>
-                        <p class="text-muted small">التخلص التام من الرطوبة</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-6 mt-md-4">
-                    <div class="text-center">
-                        <div class="step-number mx-auto">6</div>
-                        <h6 class="fw-bold">فحص الجودة</h6>
-                        <p class="text-muted small">مراجعة القطع قبل التغليف</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-12 mt-md-4">
-                    <div class="text-center">
-                        <div class="step-number mx-auto">7</div>
-                        <h6 class="fw-bold">التسليم</h6>
-                        <p class="text-muted small">إعادة القطع في الموعد المكتمل</p>
-                    </div>
-                </div>
-            </div>
+      <div class="service-row">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none"><rect x="6" y="20" width="36" height="14" rx="3" stroke="currentColor" stroke-width="2"/><path d="M10 20v-4a4 4 0 014-4h20a4 4 0 014 4v4" stroke="currentColor" stroke-width="2"/><path d="M9 34v6M39 34v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <div>
+          <h3 data-ar="تنظيف المفروشات" data-en="Upholstery cleaning">تنظيف المفروشات</h3>
+          <p data-ar="تنظيف وعناية بالمجالس والكنب والمفروشات باستخدام طرق مناسبة لنوع القماش." data-en="Cleaning and care for majlis seating, sofas and soft furnishings, using methods suited to each fabric type.">تنظيف وعناية بالمجالس والكنب والمفروشات باستخدام طرق مناسبة لنوع القماش.</p>
         </div>
-    </section>
+        <a href="#quote" class="service-link" data-ar="اطلب الخدمة" data-en="Book now">اطلب الخدمة</a>
+      </div>
 
-    <section id="sectors" class="py-5 bg-light-blue">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold text-dark-blue">خدمات للأفراد والمنشآت</h2>
-                <p class="text-muted fs-5">حلول مخصصة تلبّي احتياجات جميع القطاعات</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <div class="p-4 bg-white rounded-4 border text-center h-100">
-                        <i class="bi bi-house-door display-5 text-primary-blue mb-3"></i>
-                        <h5 class="fw-bold">للمنازل</h5>
-                        <p class="text-muted small">تنظيف السجاد والموكيت والمجالس والمفروشات المنزلية بعناية فائقة.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="p-4 bg-white rounded-4 border text-center h-100">
-                        <i class="bi bi-building display-5 text-primary-blue mb-3"></i>
-                        <h5 class="fw-bold">للشركات والمكاتب</h5>
-                        <p class="text-muted small">برامج تنظيف دورية للمكاتب والمنشآت وفق جداول مرنة.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="p-4 bg-white rounded-4 border text-center h-100">
-                        <i class="bi bi-moon-stars display-5 text-primary-blue mb-3"></i>
-                        <h5 class="fw-bold">للمساجد</h5>
-                        <p class="text-muted small">حلول تنظيف متكاملة ومناسبة للمساحات الكبيرة وسجاد المساجد.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="p-4 bg-white rounded-4 border text-center h-100">
-                        <i class="bi bi-hospital display-5 text-primary-blue mb-3"></i>
-                        <h5 class="fw-bold">للفنادق والمرافق</h5>
-                        <p class="text-muted small">تنظيف احترافي مستمر يلبي متطلبات تشغيل المرافق الفندقية.</p>
-                    </div>
-                </div>
-            </div>
+      <div class="service-row">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/><path d="M18 27c2 3 4 3 6 0s4-3 6 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <div>
+          <h3 data-ar="إزالة البقع" data-en="Stain removal">إزالة البقع</h3>
+          <p data-ar="معالجة متخصصة للبقع المختلفة مع اختيار طريقة المعالجة المناسبة لنوع البقعة والخامة." data-en="Targeted treatment for different stain types, matching the method to the stain and the material.">معالجة متخصصة للبقع المختلفة مع اختيار طريقة المعالجة المناسبة لنوع البقعة والخامة.</p>
         </div>
-    </section>
+        <a href="#quote" class="service-link" data-ar="اطلب الخدمة" data-en="Book now">اطلب الخدمة</a>
+      </div>
 
-    <section id="quote-form" class="py-5">
-        <div class="container py-4">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5">
-                        <div class="text-center mb-4">
-                            <h3 class="fw-bold text-dark-blue">احصل على عرض سعر سريع</h3>
-                            <p class="text-muted">أدخل بيانات طلبك وسيقوم فريقنا بالتواصل معك فوراً عبر الواتساب</p>
-                        </div>
-                        <form onsubmit="handleFormSubmit(event)">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label class="form-label fw-semibold">الاسم</label>
-                                    <input type="text" id="formName" class="form-control rounded-3" placeholder="أدخل اسمك" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-semibold">رقم الجوال</label>
-                                    <input type="tel" id="formPhone" class="form-control rounded-3" placeholder="05xxxxxxxx" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-semibold">المدينة / الحي</label>
-                                    <input type="text" id="formCity" class="form-control rounded-3" placeholder="الرياض - حي..." required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-semibold">نوع الخدمة</label>
-                                    <select id="formService" class="form-select rounded-3" required>
-                                        <option value="غسيل سجاد">غسيل سجاد</option>
-                                        <option value="غسيل موكيت">غسيل موكيت</option>
-                                        <option value="تنظيف مجالس وكنب">تنظيف مجالس وكنب</option>
-                                        <option value="إزالة بقع">إزالة بقع</option>
-                                        <option value="إزالة روائح">إزالة روائح</option>
-                                        <option value="خدمات منشآت">خدمات منشآت / شركات</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-semibold">عدد القطع</label>
-                                    <input type="number" id="formCount" class="form-control rounded-3" placeholder="مثال: 3" min="1" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-semibold">المقاسات التقريبية (إن وجدت)</label>
-                                    <input type="text" id="formSizes" class="form-control rounded-3" placeholder="مثال: 3x4 متر">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label fw-semibold">ملاحظات إضافية</label>
-                                    <textarea id="formNotes" class="form-control rounded-3" rows="3" placeholder="أي تفاصيل خاصة بوجود بقع معينة أو نوع خامة..."></textarea>
-                                </div>
-                                <div class="col-12 mt-4">
-                                    <button type="submit" class="btn btn-whatsapp w-100 py-3 fs-5">
-                                        <i class="bi bi-whatsapp me-2"></i> إرسال الطلب عبر واتساب
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+      <div class="service-row">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none"><path d="M24 6c6 8 12 14 12 22a12 12 0 01-24 0c0-8 6-14 12-22z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <div>
+          <h3 data-ar="إزالة الروائح" data-en="Odour removal">إزالة الروائح</h3>
+          <p data-ar="معالجة الروائح غير المرغوبة ومنح السجاد والمفروشات إحساسًا أفضل بالنظافة والانتعاش." data-en="Treating unwanted odours at the source, so carpets and upholstery feel genuinely fresh.">معالجة الروائح غير المرغوبة ومنح السجاد والمفروشات إحساسًا أفضل بالنظافة والانتعاش.</p>
         </div>
-    </section>
+        <a href="#quote" class="service-link" data-ar="اطلب الخدمة" data-en="Book now">اطلب الخدمة</a>
+      </div>
 
-    <section id="faq" class="py-5 bg-light-blue">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold text-dark-blue">الأسئلة الشائعة</h2>
-                <p class="text-muted fs-5">إجابات على أكثر الاستفسارات شيوعاً</p>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="accordion shadow-sm" id="faqAccordion">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                    هل توفرون خدمة الاستلام والتوصيل؟
-                                </button>
-                            </h2>
-                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    نعم، نوفر خدمة استلام وتسليم السجاد والمفروشات من باب منزلك ضمن مناطق التغطية المتاحة في الرياض.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                    كم يستغرق وقت تنظيف السجاد؟
-                                </button>
-                            </h2>
-                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    تختلف المدة بحسب عدد القطع وحالتها واحتياجها للتجفيف الكامل، وعادة ما يستغرق ذلك بين 48 إلى 72 ساعة لضمان التجفيف والجودة.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                    هل يمكن إزالة جميع أنواع البقع؟
-                                </button>
-                            </h2>
-                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    نعمل على معالجة البقع بأفضل الطرق المناسبة للخامة، لكن لا يمكن ضمان إزالة البقع القديمة جداً بنسبة 100% إذا كانت قد أثرت مسبقاً على ألياف القماش أو الألوان.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                    هل مواد التنظيف المستخدمة آمنة؟
-                                </button>
-                            </h2>
-                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    نعم، نستخدم مواد تنظيف متخصصة ومصممة خصيصاً للمفروشات والسجاد وتعتبر آمنة ومناسبة لمختلف أنواع الخامات.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="service-row">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none"><path d="M24 5l16 7v11c0 10-6.5 17.5-16 20-9.5-2.5-16-10-16-20V12l16-7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M17 24l5 5 9-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <h3 data-ar="التعقيم والعناية" data-en="Sanitizing &amp; care">التعقيم والعناية</h3>
+          <p data-ar="خدمات عناية إضافية للمفروشات والسجاد حسب طبيعة الاستخدام وحالة القطعة." data-en="Additional care services for carpets and upholstery, based on use and condition.">خدمات عناية إضافية للمفروشات والسجاد حسب طبيعة الاستخدام وحالة القطعة.</p>
         </div>
-    </section>
+        <a href="#quote" class="service-link" data-ar="اطلب الخدمة" data-en="Book now">اطلب الخدمة</a>
+      </div>
 
-    <footer class="bg-dark text-white py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <h5 class="fw-bold mb-3 text-primary-blue">لين برو كلين</h5>
-                    <p class="text-white-50">متخصصون في غسيل السجاد والموكيت والمفروشات بالرياض، نقدم حلول تنظيف احترافية وموثوقة للأفراد والمنشآت.</p>
-                </div>
-                <div class="col-lg-4">
-                    <h5 class="fw-bold mb-3">تواصل معنا</h5>
-                    <ul class="list-unstyled text-white-50">
-                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> الرياض – المملكة العربية السعودية</li>
-                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> 0500000000</li>
-                        <li class="mb-2"><i class="bi bi-whatsapp me-2"></i> 0500000000</li>
-                    </ul>
-                </div>
-                <div class="col-lg-4">
-                    <h5 class="fw-bold mb-3">ساعات العمل</h5>
-                    <p class="text-white-50">يومياً من الساعة 8:00 صباحاً حتى 10:00 مساءً</p>
-                </div>
-            </div>
-            <hr class="border-secondary my-4">
-            <div class="text-center text-white-50 small">
-                © 2026 لين برو كلين – جميع الحقوق محفوظة.
-            </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker"><svg class="diamond" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><span data-ar="كيف نعمل" data-en="How it works">كيف نعمل</span></div>
+      <h2 data-ar="من أول اتصال حتى استلامك للقطعة نظيفة" data-en="From your first message to a spotless delivery">من أول اتصال حتى استلامك للقطعة نظيفة</h2>
+    </div>
+    <div class="process process-layout">
+      <div class="process-visual">
+        <img src="Assets/service1.png" alt="خدمة غسيل السجاد والموكيت والمفروشات" width="560" height="420">
+      </div>
+      <div class="process-steps">
+        <div class="process-line"></div>
+
+        <div class="process-step">
+          <div class="step-dot"><span>1</span></div>
+          <div class="step-body"><h3 data-ar="اطلب الخدمة" data-en="Request the service">اطلب الخدمة</h3><p data-ar="تواصل معنا عبر الهاتف أو واتساب وأرسل تفاصيل القطع، أو اطلب زيارة للتقييم عند توفر الخدمة." data-en="Reach us by phone or WhatsApp with your item details, or request an in-home assessment where available.">تواصل معنا عبر الهاتف أو واتساب وأرسل تفاصيل القطع، أو اطلب زيارة للتقييم عند توفر الخدمة.</p></div>
         </div>
-    </footer>
+        <div class="process-step">
+          <div class="step-dot"><span>2</span></div>
+          <div class="step-body"><h3 data-ar="الاستلام" data-en="Pickup">الاستلام</h3><p data-ar="نستلم السجاد والمفروشات من موقع العميل وفق نطاق الخدمة." data-en="We collect your carpet and upholstery from your location, within our service area.">نستلم السجاد والمفروشات من موقع العميل وفق نطاق الخدمة.</p></div>
+        </div>
+        <div class="process-step">
+          <div class="step-dot"><span>3</span></div>
+          <div class="step-body"><h3 data-ar="الفحص والتقييم" data-en="Inspection &amp; assessment">الفحص والتقييم</h3><p data-ar="يتم فحص القطعة وتحديد نوع الخامة ودرجة الاتساخ والبقع وطريقة التنظيف المناسبة." data-en="We inspect the piece and determine the material, level of soiling and stains, and the right cleaning method.">يتم فحص القطعة وتحديد نوع الخامة ودرجة الاتساخ والبقع وطريقة التنظيف المناسبة.</p></div>
+        </div>
+        <div class="process-step">
+          <div class="step-dot"><span>4</span></div>
+          <div class="step-body"><h3 data-ar="المعالجة والتنظيف" data-en="Treatment &amp; cleaning">المعالجة والتنظيف</h3><p data-ar="تبدأ عملية التنظيف باستخدام المعدات والمواد المناسبة لكل نوع من أنواع السجاد والمفروشات." data-en="Cleaning begins with the equipment and products suited to each type of carpet and upholstery.">تبدأ عملية التنظيف باستخدام المعدات والمواد المناسبة لكل نوع من أنواع السجاد والمفروشات.</p></div>
+        </div>
+        <div class="process-step">
+          <div class="step-dot"><span>5</span></div>
+          <div class="step-body"><h3 data-ar="التجفيف" data-en="Drying">التجفيف</h3><p data-ar="تخضع القطع لعملية تجفيف مناسبة لضمان التخلص من الرطوبة الزائدة." data-en="Pieces go through proper drying to remove excess moisture.">تخضع القطع لعملية تجفيف مناسبة لضمان التخلص من الرطوبة الزائدة.</p></div>
+        </div>
+        <div class="process-step">
+          <div class="step-dot"><span>6</span></div>
+          <div class="step-body"><h3 data-ar="فحص الجودة" data-en="Quality check">فحص الجودة</h3><p data-ar="يتم فحص القطعة قبل تجهيزها للتسليم." data-en="Every piece is checked before it's prepared for delivery.">يتم فحص القطعة قبل تجهيزها للتسليم.</p></div>
+        </div>
+        <div class="process-step">
+          <div class="step-dot"><span>7</span></div>
+          <div class="step-body"><h3 data-ar="التسليم" data-en="Delivery">التسليم</h3><p data-ar="نعيد القطع إلى العميل بعد الانتهاء من عملية التنظيف وفق الموعد المتفق عليه." data-en="We return your pieces once cleaning is complete, at the agreed time.">نعيد القطع إلى العميل بعد الانتهاء من عملية التنظيف وفق الموعد المتفق عليه.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <a href="#" onclick="openWhatsApp('مرحبًا، أرغب في الاستفسار عن خدمات غسيل السجاد والموكيت.')" class="floating-wa shadow" title="تواصل عبر واتساب">
-        <i class="bi bi-whatsapp"></i>
-    </a>
+<!-- ===================== CARE BANNER ===================== -->
+<section class="section-tight">
+  <div class="wrap">
+    <div class="care-banner">
+      <div>
+        <h2 data-ar="عناية تبدأ من أول خطوة" data-en="Care that starts from the first step">عناية تبدأ من أول خطوة</h2>
+        <p data-ar="من لحظة استلام القطعة، نتعامل معها بعناية ومسؤولية. هدفنا ليس فقط أن يبدو السجاد نظيفًا، بل أن تحصل على تجربة تنظيف متكاملة واحترافية." data-en="From the moment we collect your piece, we handle it with care and responsibility. Our goal isn't just a clean-looking carpet — it's a complete, professional cleaning experience.">من لحظة استلام القطعة، نتعامل معها بعناية ومسؤولية. هدفنا ليس فقط أن يبدو السجاد نظيفًا، بل أن تحصل على تجربة تنظيف متكاملة واحترافية.</p>
+      </div>
+      <a href="#quote" class="btn btn-dark" data-ar="اطلب خدمتك الآن" data-en="Book now">اطلب خدمتك الآن</a>
+    </div>
+  </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- ===================== SEGMENTS ===================== -->
+<section class="band-cream">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker"><svg class="diamond" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><span data-ar="خدمات للأفراد والمنشآت" data-en="For homes &amp; businesses">خدمات للأفراد والمنشآت</span></div>
+      <h2 data-ar="حلول تنظيف تناسب كل احتياج" data-en="Cleaning solutions for every need">حلول تنظيف تناسب كل احتياج</h2>
+    </div>
+    <div class="segment-grid">
+      <div class="segment"><h3 data-ar="للمنازل" data-en="Homes">للمنازل</h3><p data-ar="حلول تنظيف للسجاد والموكيت والمجالس والمفروشات المنزلية." data-en="Cleaning solutions for household carpets, carpet-tile, majlis seating and furnishings.">حلول تنظيف للسجاد والموكيت والمجالس والمفروشات المنزلية.</p></div>
+      <div class="segment"><h3 data-ar="للشركات والمكاتب" data-en="Companies &amp; offices">للشركات والمكاتب</h3><p data-ar="خدمات تنظيف دورية للمكاتب والمنشآت، مع إمكانية تنظيم جداول الزيارات حسب احتياج المنشأة." data-en="Recurring cleaning programs for offices and facilities, with visit schedules built around your needs.">خدمات تنظيف دورية للمكاتب والمنشآت، مع إمكانية تنظيم جداول الزيارات حسب احتياج المنشأة.</p></div>
+      <div class="segment"><h3 data-ar="للمساجد والمنشآت الكبيرة" data-en="Mosques &amp; large facilities">للمساجد والمنشآت الكبيرة</h3><p data-ar="حلول مناسبة للمساحات الكبيرة والسجاد والموكيت المستخدم في المساجد والمنشآت." data-en="Solutions suited to large spaces and the carpet used in mosques and institutions.">حلول مناسبة للمساحات الكبيرة والسجاد والموكيت المستخدم في المساجد والمنشآت.</p></div>
+      <div class="segment"><h3 data-ar="للفنادق والمرافق" data-en="Hotels &amp; facilities">للفنادق والمرافق</h3><p data-ar="خدمات تنظيف وعناية بالمفروشات والسجاد وفق متطلبات التشغيل." data-en="Cleaning and care services matched to operational requirements.">خدمات تنظيف وعناية بالمفروشات والسجاد وفق متطلبات التشغيل.</p></div>
+    </div>
+    <div style="margin-top:36px;">
+      <a href="#quote" class="btn btn-dark" data-ar="اطلب عرضًا خاصًا للمنشآت" data-en="Request a business quote">اطلب عرضًا خاصًا للمنشآت</a>
+    </div>
+  </div>
+</section>
 
-    <script src="script.js"></script>
-    <script type="application/json" id="legacy-inline-script">
-        // Set Client WhatsApp Number Here (Format: 966XXXXXXXXX without + or leading 0)
-        const WHATSAPP_NUMBER = "966500000000"; 
-        const translations = {
-            "لين برو كلين": "Leen Pro Clean",
-            "الرئيسية": "Home",
-            "لماذا تختارنا؟": "Why Choose Us?",
-            "خدماتنا": "Our Services",
-            "كيف نعمل": "How It Works",
-            "القطاعات": "Industries",
-            "الأسئلة الشائعة": "FAQ",
-            "اطلب الخدمة الآن": "Request a Service",
-            "نظافة احترافية وعناية متكاملة": "Professional Cleaning & Complete Care",
-            "نظافة احترافية… تعيد لمفروشاتك رونقها": "Professional Cleaning That Restores Your Furnishings",
-            "نقدم خدمات متخصصة في غسيل السجاد والموكيت والمفروشات باستخدام أساليب تنظيف احترافية ومواد مصممة للعناية بالألياف والأقمشة، مع عناية دقيقة بكل قطعة من لحظة استلامها وحتى تسليمها.": "We provide specialized carpet, rug, and upholstery cleaning using professional methods and products designed to care for fibers and fabrics, with careful attention from pickup through delivery.",
-            "نعتني بالتفاصيل… لأن الفرق يظهر في التفاصيل.": "We care about the details because the difference is in the details.",
-            "تواصل عبر واتساب": "Contact Us on WhatsApp",
-            "خدمة استلام وتوصيل راقية": "Premium Pickup & Delivery",
-            "نستلمها من باب منزلك، ونعيدها إليك مغسولة ومعقمة وجاهزة للاستخدام.": "We collect your items from your door and return them clean, sanitized, and ready to use.",
-            "تغطية شاملة لمدينة الرياض": "Serving Riyadh Citywide",
-            "لأن سجادك يستحق أكثر من مجرد غسيل تقليدي": "Your carpets deserve more than ordinary cleaning.",
-            "عناية احترافية": "Professional Care",
-            "نتعامل مع كل قطعة وفق نوع الألياف والخامة ودرجة الاتساخ لضمان الحماية الكاملة.": "We treat every item according to its fibers, material, and level of soiling for complete protection.",
-            "مواد تنظيف متخصصة": "Specialized Products",
-            "نستخدم مواد مخصصة للمفروشات والسجاد للحفاظ على سلامة الألوان ونعومة الألياف.": "We use products made for carpets and upholstery to preserve color and fiber softness.",
-            "إزالة البقع والروائح": "Stain & Odor Removal",
-            "نعمل على معالجة البقع الصعبة والروائح غير المرغوبة باستخدام حلول متطورة.": "We treat stubborn stains and unwanted odors with advanced cleaning solutions.",
-            "تجفيف احترافي": "Professional Drying",
-            "نهتم بمرحلة التجفيف الكامل لتقليل الرطوبة ومنع تكون أي روائح أو بكتيريا.": "Thorough drying reduces moisture and helps prevent odors and bacteria.",
-            "استلام وتسليم مريح": "Convenient Pickup & Delivery",
-            "نوفر خدمة استلام وتسليم مريحة لعملائنا وفق نطاق التغطية المتاح بالرياض.": "We offer convenient pickup and delivery within our available Riyadh coverage area.",
-            "فحص دقيق للجودة": "Thorough Quality Check",
-            "تمر جميع القطع بمرحلة فحص شاملة للتأكد من الجودة والنظافة قبل التسليم.": "Every item receives a complete inspection to verify quality and cleanliness before delivery.",
-            "خدماتنا المتخصصة": "Our Specialized Services",
-            "حلول تنظيف متكاملة تناسب جميع أنواع المفروشات": "Complete cleaning solutions for every type of furnishing.",
-            "غسيل السجاد": "Carpet Cleaning",
-            "تنظيف احترافي للسجاد بمختلف أنواعه وخاماته، مع معالجة الاتساخات والبقع والروائح وفق حالة كل قطعة.": "Professional cleaning for carpets of every type and material, with treatment tailored to each item's stains, dirt, and odors.",
-            "غسيل الموكيت": "Rug Cleaning",
-            "حلول متخصصة لتنظيف الموكيت في المنازل والمكاتب والمنشآت، مع الاهتمام بإزالة الأوساخ المترسبة.": "Specialized rug cleaning for homes, offices, and facilities, with careful removal of embedded dirt.",
-            "تنظيف المفروشات": "Upholstery Cleaning",
-            "تنظيف وعناية بالمجالس والكنب والمفروشات باستخدام طرق مناسبة لنوع القماش للحفاظ على مظهرها.": "Careful cleaning for sofas, seating, and upholstery using fabric-appropriate methods to preserve their appearance.",
-            "إزالة البقع": "Stain Removal",
-            "معالجة متخصصة للبقع المختلفة (قهوة، شاي، زيوت) مع اختيار طرق معالجة تناسب نوع الخامة.": "Specialized treatment for coffee, tea, oil, and other stains, using methods suited to each material.",
-            "إزالة الروائح": "Odor Removal",
-            "معالجة مصدر الروائح غير المرغوبة ومنح المفروشات إحساسًا متجددًا بالنظافة والانتعاش.": "We treat the source of unwanted odors and leave your furnishings feeling fresh and clean.",
-            "التعقيم والعناية": "Sanitization & Care",
-            "خدمات تعقيم وعناية إضافية للمفروشات والسجاد لحمايتها من الميكروبات وضمان بيئة صحية.": "Additional sanitization and care for carpets and upholstery to help protect against microbes and support a healthier environment.",
-            "اطلب الخدمة": "Request Service",
-            "كيف نعمل؟": "How It Works",
-            "خطوات منظمة تضمن أعلى معايير الجودة": "Organized steps that ensure the highest quality standards.",
-            "الاستلام": "Pickup",
-            "تواصل معنا وأرسل التفاصيل": "Contact us and send the details.",
-            "نستلم السجاد من موقعك": "We collect your items from your location.",
-            "الفحص والتقييم": "Inspection & Assessment",
-            "تحديد الخامة وطريقة التنظيف": "We identify the material and cleaning method.",
-            "المعالجة والتنظيف": "Treatment & Cleaning",
-            "استخدام مواد ومعدات مخصصة": "We use specialized products and equipment.",
-            "التجفيف": "Drying",
-            "التخلص التام من الرطوبة": "We remove moisture completely.",
-            "فحص الجودة": "Quality Check",
-            "مراجعة القطع قبل التغليف": "We review every item before packaging.",
-            "التسليم": "Delivery",
-            "إعادة القطع في الموعد المكتمل": "We return your items on schedule.",
-            "خدمات للأفراد والمنشآت": "Services for Homes & Businesses",
-            "حلول مخصصة تلبّي احتياجات جميع القطاعات": "Tailored solutions for every sector.",
-            "للمنازل": "Homes",
-            "تنظيف السجاد والموكيت والمجالس والمفروشات المنزلية بعناية فائقة.": "Careful cleaning for carpets, rugs, seating, and home furnishings.",
-            "للشركات والمكاتب": "Companies & Offices",
-            "برامج تنظيف دورية للمكاتب والمنشآت وفق جداول مرنة.": "Scheduled cleaning programs for offices and facilities.",
-            "للمساجد": "Mosques",
-            "حلول تنظيف متكاملة ومناسبة للمساحات الكبيرة وسجاد المساجد.": "Complete cleaning solutions for large spaces and mosque carpets.",
-            "للفنادق والمرافق": "Hotels & Facilities",
-            "تنظيف احترافي مستمر يلبي متطلبات تشغيل المرافق الفندقية.": "Ongoing professional cleaning that meets hospitality facility needs.",
-            "احصل على عرض سعر سريع": "Get a Quick Quote",
-            "أدخل بيانات طلبك وسيقوم فريقنا بالتواصل معك فوراً عبر الواتساب": "Enter your request details and our team will contact you promptly on WhatsApp.",
-            "الاسم": "Name",
-            "أدخل اسمك": "Enter your name",
-            "رقم الجوال": "Mobile Number",
-            "المدينة / الحي": "City / District",
-            "الرياض - حي...": "Riyadh - District...",
-            "نوع الخدمة": "Service Type",
-            "تنظيف مجالس وكنب": "Sofa & Upholstery Cleaning",
-            "إزالة بقع": "Stain Removal",
-            "إزالة روائح": "Odor Removal",
-            "خدمات منشآت / شركات": "Facility / Company Services",
-            "عدد القطع": "Number of Items",
-            "مثال: 3": "Example: 3",
-            "المقاسات التقريبية (إن وجدت)": "Approximate Sizes (if available)",
-            "مثال: 3x4 متر": "Example: 3x4 meters",
-            "ملاحظات إضافية": "Additional Notes",
-            "أي تفاصيل خاصة بوجود بقع معينة أو نوع خامة...": "Details about specific stains or material type...",
-            "إرسال الطلب عبر واتساب": "Send Request via WhatsApp",
-            "هل توفرون خدمة الاستلام والتوصيل؟": "Do you offer pickup and delivery?",
-            "كم يستغرق وقت تنظيف السجاد؟": "How long does carpet cleaning take?",
-            "هل يمكن إزالة جميع أنواع البقع؟": "Can all types of stains be removed?",
-            "هل مواد التنظيف المستخدمة آمنة؟": "Are the cleaning products safe?",
-            "نعم، نوفر خدمة استلام وتسليم السجاد والمفروشات من باب منزلك ضمن مناطق التغطية المتاحة في الرياض.": "Yes, we collect and deliver carpets and upholstery from your door within our available Riyadh coverage area.",
-            "تختلف المدة بحسب عدد القطع وحالتها واحتياجها للتجفيف الكامل، وعادة ما يستغرق ذلك بين 48 إلى 72 ساعة لضمان التجفيف والجودة.": "The timeframe depends on the number and condition of the items and their drying needs. It usually takes 48 to 72 hours to ensure thorough drying and quality.",
-            "نعمل على معالجة البقع بأفضل الطرق المناسبة للخامة، لكن لا يمكن ضمان إزالة البقع القديمة جداً بنسبة 100% إذا كانت قد أثرت مسبقاً على ألياف القماش أو الألوان.": "We treat stains with the best method for each material, but very old stains cannot be guaranteed to disappear completely if they have already affected the fabric fibers or colors.",
-            "نعم، نستخدم مواد تنظيف متخصصة ومصممة خصيصاً للمفروشات والسجاد وتعتبر آمنة ومناسبة لمختلف أنواع الخامات.": "Yes, we use specialized products designed for carpets and upholstery that are safe and suitable for different materials.",
-            "متخصصون في غسيل السجاد والموكيت والمفروشات بالرياض، نقدم حلول تنظيف احترافية وموثوقة للأفراد والمنشآت.": "We specialize in carpet, rug, and upholstery cleaning in Riyadh, providing professional and reliable solutions for homes and businesses.",
-            "تواصل معنا": "Contact Us",
-            "الرياض – المملكة العربية السعودية": "Riyadh, Saudi Arabia",
-            "ساعات العمل": "Working Hours",
-            "يومياً من الساعة 8:00 صباحاً حتى 10:00 مساءً": "Daily from 8:00 AM to 10:00 PM",
-            "جميع الحقوق محفوظة.": "All rights reserved."
-        };
-        const reverseTranslations = Object.fromEntries(Object.entries(translations).map(([arabic, english]) => [english, arabic]));
-        let currentLanguage = localStorage.getItem('leenProCleanLanguage') || 'ar';
+<!-- ===================== PICKUP ===================== -->
+<section>
+  <div class="wrap pickup">
+    <div class="pickup-art">
+        <img src="assets/pickup.png" alt="خدمة الاستلام والتوصيل" >
+    </div>
+    <div>
+      <div class="kicker"><svg class="diamond" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><span data-ar="الاستلام والتوصيل" data-en="Pickup &amp; delivery">الاستلام والتوصيل</span></div>
+      <h2 style="font-size:clamp(23px,3vw,31px);" data-ar="راحتك تبدأ من باب منزلك" data-en="Convenience starts at your door">راحتك تبدأ من باب منزلك</h2>
+      <p style="margin-top:18px;color:var(--muted);font-size:16.5px;" data-ar="لا حاجة للبحث عن وسيلة لنقل السجاد. نوفر خدمة استلام وتسليم السجاد والمفروشات ضمن نطاق التغطية، لتكون تجربة التنظيف أكثر سهولة وراحة." data-en="No need to arrange transport for your carpet. We offer pickup and delivery within our coverage area, so the cleaning experience is simpler and more convenient.">لا حاجة للبحث عن وسيلة لنقل السجاد. نوفر خدمة استلام وتسليم السجاد والمفروشات ضمن نطاق التغطية، لتكون تجربة التنظيف أكثر سهولة وراحة.</p>
+      <a href="#quote" class="btn btn-solid" style="margin-top:26px;" data-ar="اطلب الاستلام الآن" data-en="Request pickup">اطلب الاستلام الآن</a>
+    </div>
+  </div>
+</section>
 
-        function translatePage(language) {
-            const dictionary = language === 'en' ? translations : reverseTranslations;
-            const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-            const textNodes = [];
-            while (walker.nextNode()) textNodes.push(walker.currentNode);
-            textNodes.forEach((node) => {
-                const value = node.nodeValue.trim();
-                if (dictionary[value]) node.nodeValue = node.nodeValue.replace(value, dictionary[value]);
-            });
-            document.querySelectorAll('[placeholder], [title], option').forEach((element) => {
-                ['placeholder', 'title'].forEach((attribute) => {
-                    if (element.hasAttribute(attribute) && dictionary[element.getAttribute(attribute)]) {
-                        element.setAttribute(attribute, dictionary[element.getAttribute(attribute)]);
-                    }
-                });
-                if (element.tagName === 'OPTION' && dictionary[element.value]) {
-                    element.value = dictionary[element.value];
-                }
-                const value = element.textContent.trim();
-                if (dictionary[value]) element.textContent = dictionary[value];
-            });
-            document.documentElement.lang = language;
-            document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
-            document.getElementById('bootstrapStyles').href = language === 'ar'
-                ? 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css'
-                : 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css';
-            document.getElementById('languageToggle').innerHTML = language === 'ar'
-                ? '<i class="bi bi-globe me-1"></i> English'
-                : '<i class="bi bi-globe me-1"></i> عربي';
-            document.getElementById('languageToggle').setAttribute('aria-label', language === 'ar' ? 'Switch to English' : 'التبديل إلى العربية');
-            localStorage.setItem('leenProCleanLanguage', language);
-            currentLanguage = language;
-        }
 
-        function toggleLanguage() {
-            translatePage(currentLanguage === 'ar' ? 'en' : 'ar');
-        }
+<!-- ===================== QUALITY ===================== -->
+<section class="band-ink">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker"><svg class="diamond" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><span data-ar="منهج العمل" data-en="Our approach">منهج العمل</span></div>
+      <h2 data-ar="الجودة لدينا ليست خطوة… بل منهج عمل" data-en="Quality isn't a step here — it's the method">الجودة لدينا ليست خطوة… بل منهج عمل</h2>
+      <p style="color:rgba(255,255,255,0.65);" data-ar="نعتمد على مجموعة من المراحل والإجراءات لضمان تقديم مستوى ثابت من الخدمة، بداية من استقبال القطعة وحتى تسليمها." data-en="A consistent set of stages and procedures ensures a steady standard of service, from intake to delivery.">نعتمد على مجموعة من المراحل والإجراءات لضمان تقديم مستوى ثابت من الخدمة، بداية من استقبال القطعة وحتى تسليمها.</p>
+    </div>
+    <div class="quality-grid">
+      <div class="quality-cell"><svg class="q-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2"/><path d="M14 20l4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><h4 data-ar="فحص" data-en="Inspect">فحص</h4><p data-ar="تحديد نوع الخامة وحالتها" data-en="Identify material and condition">تحديد نوع الخامة وحالتها</p></div>
+      <div class="quality-cell"><svg class="q-icon" viewBox="0 0 40 40" fill="none"><path d="M20 6v10M20 24v10M6 20h10M24 20h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><h4 data-ar="معالجة" data-en="Treat">معالجة</h4><p data-ar="التعامل مع البقع والاتساخات" data-en="Address stains and soiling">التعامل مع البقع والاتساخات</p></div>
+      <div class="quality-cell"><svg class="q-icon" viewBox="0 0 40 40" fill="none"><path d="M10 14c4 6 4 6 8 0s4-6 8 0 4 6 4 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="8" y="22" width="24" height="10" rx="2" stroke="currentColor" stroke-width="2"/></svg><h4 data-ar="تنظيف" data-en="Clean">تنظيف</h4><p data-ar="استخدام طريقة التنظيف المناسبة" data-en="Apply the right method">استخدام طريقة التنظيف المناسبة</p></div>
+      <div class="quality-cell"><svg class="q-icon" viewBox="0 0 40 40" fill="none"><path d="M20 4c6 8 12 14 12 20a12 12 0 01-24 0c0-6 6-12 12-20z" stroke="currentColor" stroke-width="2"/></svg><h4 data-ar="شطف" data-en="Rinse">شطف</h4><p data-ar="التخلص من بقايا مواد التنظيف" data-en="Clear cleaning residue">التخلص من بقايا مواد التنظيف</p></div>
+      <div class="quality-cell"><svg class="q-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="2"/><path d="M20 4v6M20 30v6M4 20h6M30 20h6M8 8l4 4M28 28l4 4M8 32l4-4M28 12l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><h4 data-ar="تجفيف" data-en="Dry">تجفيف</h4><p data-ar="تقليل الرطوبة وتجهيز القطعة" data-en="Reduce moisture and prepare">تقليل الرطوبة وتجهيز القطعة</p></div>
+      <div class="quality-cell"><svg class="q-icon" viewBox="0 0 40 40" fill="none"><rect x="6" y="6" width="28" height="28" rx="4" stroke="currentColor" stroke-width="2"/><path d="M13 20l5 5 10-11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><h4 data-ar="فحص نهائي" data-en="Final check">فحص نهائي</h4><p data-ar="التأكد من الجودة قبل التسليم" data-en="Confirm quality before delivery">التأكد من الجودة قبل التسليم</p></div>
+    </div>
+  </div>
+</section>
 
-        translatePage(currentLanguage);
+<!-- ===================== ABOUT ===================== -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="kicker"><svg class="diamond" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><span data-ar="من نحن" data-en="About us">من نحن</span></div>
+      <h2 style="font-size:clamp(23px,3vw,31px);" data-ar="خبرة في التنظيف… اهتمام بالتفاصيل" data-en="Cleaning expertise, built on attention to detail">خبرة في التنظيف… اهتمام بالتفاصيل</h2>
+      <p style="margin-top:18px;color:var(--muted);font-size:16px;" data-ar="نحن شركة متخصصة في غسيل السجاد والموكيت والمفروشات، نقدّم خدمات تنظيف احترافية للأفراد والشركات والمنشآت. نعتمد في عملنا على الجمع بين المعدات المناسبة، مواد التنظيف المتخصصة، أساليب المعالجة الاحترافية، وفحص الجودة للوصول إلى أفضل نتيجة ممكنة لكل قطعة." data-en="We're a company specialized in carpet, carpet-tile and upholstery cleaning, offering professional services to individuals, companies and institutions. We combine the right equipment, specialized products, professional treatment methods and quality checks to get the best possible result for every piece.">نحن شركة متخصصة في غسيل السجاد والموكيت والمفروشات، نقدّم خدمات تنظيف احترافية للأفراد والشركات والمنشآت. نعتمد في عملنا على الجمع بين المعدات المناسبة، مواد التنظيف المتخصصة، أساليب المعالجة الاحترافية، وفحص الجودة للوصول إلى أفضل نتيجة ممكنة لكل قطعة.</p>
+      <p style="margin-top:14px;color:var(--muted);font-size:16px;" data-ar="نحن لا نتعامل مع السجاد على أنه مجرد قطعة تحتاج إلى الغسيل، بل نعتبر كل قطعة حالة مختلفة تحتاج إلى معرفة نوع الخامة وطريقة التنظيف المناسبة لها." data-en="We don't treat a carpet as just something that needs washing — every piece is a different case, requiring us to understand its material and the right way to clean it.">نحن لا نتعامل مع السجاد على أنه مجرد قطعة تحتاج إلى الغسيل، بل نعتبر كل قطعة حالة مختلفة تحتاج إلى معرفة نوع الخامة وطريقة التنظيف المناسبة لها.</p>
 
-        function openWhatsApp(customMessage) {
-            if (currentLanguage === 'en') {
-                customMessage = customMessage
-                    .replace('مرحبًا، أرغب في الاستفسار عن خدمات غسيل السجاد والموكيت والحصول على عرض سعر.', 'Hello, I would like to ask about your carpet and rug cleaning services and request a quote.')
-                    .replace('مرحبًا، أرغب في الاستفسار عن خدمات غسيل السجاد والموكيت.', 'Hello, I would like to ask about your carpet and rug cleaning services.');
-            }
-            const encodedText = encodeURIComponent(customMessage);
-            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`, '_blank');
-        }
+      <div class="pillar-card">
+        <h4 data-ar="رؤيتنا" data-en="Our vision">رؤيتنا</h4>
+        <p data-ar="أن نكون من العلامات الموثوقة والرائدة في مجال تنظيف السجاد والموكيت والمفروشات في المملكة العربية السعودية، وأن نقدّم تجربة تجمع بين الجودة والاحترافية والراحة." data-en="To be a trusted, leading name in carpet, carpet-tile and upholstery cleaning in Saudi Arabia, delivering an experience that combines quality, professionalism and ease.">أن نكون من العلامات الموثوقة والرائدة في مجال تنظيف السجاد والموكيت والمفروشات في المملكة العربية السعودية، وأن نقدّم تجربة تجمع بين الجودة والاحترافية والراحة.</p>
+      </div>
+      <div class="pillar-card" style="margin-bottom:0;">
+        <h4 data-ar="رسالتنا" data-en="Our mission">رسالتنا</h4>
+        <p data-ar="تقديم خدمات تنظيف متخصصة بمعايير عالية، مع الاهتمام بالتفاصيل وتوفير تجربة مريحة وموثوقة للعميل." data-en="To deliver specialized cleaning services to a high standard, with close attention to detail and a comfortable, reliable customer experience.">تقديم خدمات تنظيف متخصصة بمعايير عالية، مع الاهتمام بالتفاصيل وتوفير تجربة مريحة وموثوقة للعميل.</p>
+      </div>
+    </div>
 
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('formName').value;
-            const phone = document.getElementById('formPhone').value;
-            const city = document.getElementById('formCity').value;
-            const service = document.getElementById('formService').value;
-            const count = document.getElementById('formCount').value;
-            const sizes = document.getElementById('formSizes').value;
-            const notes = document.getElementById('formNotes').value;
+    <div>
+      <h3 style="font-size:18.5px;margin-bottom:6px;" data-ar="قيمنا" data-en="Our values">قيمنا</h3>
+      <div class="value-list">
+        <div class="value-item"><svg class="value-mark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><div><h4 data-ar="الجودة" data-en="Quality">الجودة</h4><p data-ar="نضع جودة الخدمة في مقدمة أولوياتنا." data-en="Service quality is always our top priority.">نضع جودة الخدمة في مقدمة أولوياتنا.</p></div></div>
+        <div class="value-item"><svg class="value-mark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><div><h4 data-ar="الأمانة" data-en="Honesty">الأمانة</h4><p data-ar="نوضح للعميل طبيعة الخدمة والنتائج المتوقعة بكل شفافية." data-en="We explain the nature of the service and expected results with full transparency.">نوضح للعميل طبيعة الخدمة والنتائج المتوقعة بكل شفافية.</p></div></div>
+        <div class="value-item"><svg class="value-mark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><div><h4 data-ar="العناية" data-en="Care">العناية</h4><p data-ar="نتعامل مع ممتلكات عملائنا بعناية ومسؤولية." data-en="We handle our customers' belongings with care and responsibility.">نتعامل مع ممتلكات عملائنا بعناية ومسؤولية.</p></div></div>
+        <div class="value-item"><svg class="value-mark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><div><h4 data-ar="الاحترافية" data-en="Professionalism">الاحترافية</h4><p data-ar="نعتمد إجراءات واضحة ومنظمة في جميع مراحل العمل." data-en="Clear, organized procedures guide every stage of the work.">نعتمد إجراءات واضحة ومنظمة في جميع مراحل العمل.</p></div></div>
+        <div class="value-item"><svg class="value-mark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><div><h4 data-ar="الالتزام" data-en="Commitment">الالتزام</h4><p data-ar="نحرص على الالتزام بالمواعيد والإجراءات المتفق عليها." data-en="We honour the appointments and procedures we agree on.">نحرص على الالتزام بالمواعيد والإجراءات المتفق عليها.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            const message = currentLanguage === 'en'
-                ? `Hello, I would like to request a quote:
-- *Name:* ${name}
-- *Mobile:* ${phone}
-- *City/District:* ${city}
-- *Service:* ${service}
-- *Number of items:* ${count}
-${sizes ? `- *Sizes:* ${sizes}\n` : ''}${notes ? `- *Notes:* ${notes}` : ''}`
-                : `مرحبًا، أرغب في طلب عرض سعر:
-- *الاسم:* ${name}
-- *الجوال:* ${phone}
-- *المدينة/الحي:* ${city}
-- *الخدمة:* ${service}
-- *عدد القطع:* ${count}
-${sizes ? `- *المقاسات:* ${sizes}\n` : ''}${notes ? `- *ملاحظات:* ${notes}` : ''}`;
+<!-- ===================== FAQ ===================== -->
+<section class="band-cream" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker"><svg class="diamond" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><span data-ar="الأسئلة الشائعة" data-en="FAQ">الأسئلة الشائعة</span></div>
+      <h2 data-ar="أسئلة يتكرر طرحها من عملائنا" data-en="Questions we hear often">أسئلة يتكرر طرحها من عملائنا</h2>
+    </div>
+    <div class="faq-layout">
+  <div class="faq-visual">
+    <img src="assets/flag.png" alt="Saudi Arabia flag">
+  </div>
+  <div class="faq-list">
+   <div class="faq-list">
+      <details open>
+        <summary><span data-ar="هل توفرون الاستلام والتوصيل؟" data-en="Do you offer pickup and delivery?">هل توفرون الاستلام والتوصيل؟</span><span class="faq-plus"></span></summary>
+        <p data-ar="نعم، نوفر خدمة الاستلام والتسليم ضمن مناطق التغطية المتاحة." data-en="Yes, pickup and delivery are available within our coverage areas.">نعم، نوفر خدمة الاستلام والتسليم ضمن مناطق التغطية المتاحة.</p>
+      </details>
+      <details>
+        <summary><span data-ar="كم يستغرق تنظيف السجاد؟" data-en="How long does carpet cleaning take?">كم يستغرق تنظيف السجاد؟</span><span class="faq-plus"></span></summary>
+        <p data-ar="تختلف المدة حسب عدد القطع ونوعها وحالتها وطريقة التنظيف واحتياجها إلى التجفيف." data-en="It varies by the number of pieces, their type and condition, the cleaning method, and drying time needed.">تختلف المدة حسب عدد القطع ونوعها وحالتها وطريقة التنظيف واحتياجها إلى التجفيف.</p>
+      </details>
+      <details>
+        <summary><span data-ar="هل يمكن إزالة جميع البقع؟" data-en="Can all stains be removed?">هل يمكن إزالة جميع البقع؟</span><span class="faq-plus"></span></summary>
+        <p data-ar="نعمل على معالجة البقع بأفضل طريقة مناسبة للخامة، ولكن لا يمكن ضمان إزالة جميع البقع بنسبة 100%، خصوصًا البقع القديمة أو التي أثرت في لون أو ألياف السجاد." data-en="We treat stains with the best method suited to the material, but we can't guarantee 100% removal of every stain — especially old stains or ones that have affected the carpet's colour or fibres.">نعمل على معالجة البقع بأفضل طريقة مناسبة للخامة، ولكن لا يمكن ضمان إزالة جميع البقع بنسبة 100%، خصوصًا البقع القديمة أو التي أثرت في لون أو ألياف السجاد.</p>
+      </details>
+      <details>
+        <summary><span data-ar="هل تستخدمون مواد آمنة؟" data-en="Are your cleaning products safe?">هل تستخدمون مواد آمنة؟</span><span class="faq-plus"></span></summary>
+        <p data-ar="نستخدم مواد تنظيف متخصصة ومناسبة للسجاد والمفروشات، ويتم اختيار المنتج وطريقة الاستخدام وفق نوع الخامة وحالتها." data-en="We use specialized products suited to carpet and upholstery, choosing the product and method based on material type and condition.">نستخدم مواد تنظيف متخصصة ومناسبة للسجاد والمفروشات، ويتم اختيار المنتج وطريقة الاستخدام وفق نوع الخامة وحالتها.</p>
+      </details>
+      <details>
+        <summary><span data-ar="هل يتغير لون السجاد بعد الغسيل؟" data-en="Can carpet colour change after washing?">هل يتغير لون السجاد بعد الغسيل؟</span><span class="faq-plus"></span></summary>
+        <p data-ar="نحرص على استخدام طرق تنظيف مناسبة للخامة، ولكن بعض الأقمشة والأصباغ قد تكون حساسة أو غير ثابتة، لذلك يتم تقييم القطعة قبل التنظيف." data-en="We use cleaning methods suited to the material, but some fabrics and dyes can be sensitive or unstable, which is why every piece is assessed before cleaning.">نحرص على استخدام طرق تنظيف مناسبة للخامة، ولكن بعض الأقمشة والأصباغ قد تكون حساسة أو غير ثابتة، لذلك يتم تقييم القطعة قبل التنظيف.</p>
+      </details>
+      <details>
+        <summary><span data-ar="هل تقدّمون خدمات للشركات؟" data-en="Do you serve businesses?">هل تقدّمون خدمات للشركات؟</span><span class="faq-plus"></span></summary>
+        <p data-ar="نعم، نقدّم خدمات للأفراد والمنشآت مع إمكانية إعداد برامج تنظيف دورية." data-en="Yes, we serve individuals and institutions, with recurring cleaning programs available.">نعم، نقدّم خدمات للأفراد والمنشآت مع إمكانية إعداد برامج تنظيف دورية.</p>
+      </details>
+      <details>
+        <summary><span data-ar="هل يمكن تنظيف الموكيت في الموقع؟" data-en="Can carpet-tile be cleaned on-site?">هل يمكن تنظيف الموكيت في الموقع؟</span><span class="faq-plus"></span></summary>
+        <p data-ar="تتوفر خدمات تنظيف الموكيت في الموقع حسب نوع الخدمة والمساحة والموقع." data-en="On-site carpet-tile cleaning is available depending on the service type, area and location.">تتوفر خدمات تنظيف الموكيت في الموقع حسب نوع الخدمة والمساحة والموقع.</p>
+      </details>
+      <details>
+        <summary><span data-ar="هل يمكن طلب خدمة عاجلة؟" data-en="Can I request an urgent service?">هل يمكن طلب خدمة عاجلة؟</span><span class="faq-plus"></span></summary>
+        <p data-ar="يمكن التواصل مع فريق خدمة العملاء لمعرفة إمكانية توفير الخدمة العاجلة حسب جدول التشغيل والمنطقة." data-en="Contact our customer service team to check availability of urgent service based on scheduling and location.">يمكن التواصل مع فريق خدمة العملاء لمعرفة إمكانية توفير الخدمة العاجلة حسب جدول التشغيل والمنطقة.</p>
+      </details>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
 
-            openWhatsApp(message);
-        }
-    </script>
+<!-- ===================== CONTACT + QUOTE FORM ===================== -->
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="kicker"><svg class="diamond" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><span data-ar="تواصل معنا" data-en="Contact us">تواصل معنا</span></div>
+      <h2 style="font-size:clamp(23px,3vw,31px);" data-ar="نحن هنا لخدمتك" data-en="We're here to help">نحن هنا لخدمتك</h2>
+      <p style="margin-top:16px;color:var(--muted);font-size:16px;" data-ar="للاستفسار أو طلب الخدمة أو الحصول على عرض سعر، تواصل معنا عبر القنوات المتاحة." data-en="For questions, bookings, or a quote, reach us through any of the channels below.">للاستفسار أو طلب الخدمة أو الحصول على عرض سعر، تواصل معنا عبر القنوات المتاحة.</p>
+
+      <div class="contact-list">
+        <div class="contact-row">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 005 5L14 13l5 2v3a2 2 0 01-2 2A15 15 0 015 6a2 2 0 012-2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <div><span class="label" data-ar="الهاتف" data-en="Phone">الهاتف</span><span class="value">+966 5X XXX XXXX</span></div>
+        </div>
+        <div class="contact-row">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none"><path d="M4 20l1.4-4.2A8 8 0 1111 20.8L4 20z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <div><span class="label" data-ar="واتساب" data-en="WhatsApp">واتساب</span><span class="value">+966 5X XXX XXXX</span></div>
+        </div>
+        <div class="contact-row">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.6"/></svg>
+          <div><span class="label" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</span><span class="value">info@example.com</span></div>
+        </div>
+        <div class="contact-row">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+          <div><span class="label" data-ar="موقعنا" data-en="Location">موقعنا</span><span class="value" data-ar="الرياض – المملكة العربية السعودية" data-en="Riyadh, Saudi Arabia">الرياض – المملكة العربية السعودية</span></div>
+        </div>
+        <div class="contact-row">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <div><span class="label" data-ar="ساعات العمل" data-en="Working hours">ساعات العمل</span><span class="value" data-ar="يوميًا 9 ص – 10 م" data-en="Daily, 9 AM – 10 PM">يوميًا 9 ص – 10 م</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-form" id="quote">
+      <h3 data-ar="احصل على عرض سعر" data-en="Get a quote">احصل على عرض سعر</h3>
+      <p class="form-note" data-ar="سيفتح الإرسال محادثة واتساب معبأة بتفاصيل طلبك." data-en="Sending will open a WhatsApp chat pre-filled with your request details.">سيفتح الإرسال محادثة واتساب معبأة بتفاصيل طلبك.</p>
+      <div class="field-row">
+        <div class="field"><label data-ar="الاسم" data-en="Name">الاسم</label><input type="text" id="qName" data-ar-placeholder="اسمك الكامل" data-en-placeholder="Your full name" placeholder="اسمك الكامل"></div>
+        <div class="field"><label data-ar="رقم الجوال" data-en="Mobile number">رقم الجوال</label><input type="tel" id="qPhone" placeholder="05XXXXXXXX"></div>
+      </div>
+      <div class="field"><label data-ar="المدينة / الحي" data-en="City / district">المدينة / الحي</label><input type="text" id="qCity" data-ar-placeholder="مثال: الرياض – حي الملقا" data-en-placeholder="e.g. Riyadh – Al Malqa" placeholder="مثال: الرياض – حي الملقا"></div>
+      <div class="field">
+        <label data-ar="نوع الخدمة" data-en="Service type">نوع الخدمة</label>
+        <select id="qService">
+          <option data-ar="غسيل سجاد" data-en="Carpet cleaning">غسيل سجاد</option>
+          <option data-ar="غسيل موكيت" data-en="Carpet-tile cleaning">غسيل موكيت</option>
+          <option data-ar="تنظيف مجالس وكنب" data-en="Majlis &amp; sofa cleaning">تنظيف مجالس وكنب</option>
+          <option data-ar="إزالة بقع" data-en="Stain removal">إزالة بقع</option>
+          <option data-ar="إزالة روائح" data-en="Odour removal">إزالة روائح</option>
+          <option data-ar="تعقيم" data-en="Sanitizing">تعقيم</option>
+          <option data-ar="خدمات منشآت" data-en="Business services">خدمات منشآت</option>
+        </select>
+      </div>
+      <div class="field-row">
+        <div class="field"><label data-ar="عدد القطع" data-en="Number of pieces">عدد القطع</label><input type="text" id="qCount" data-ar-placeholder="مثال: 3 سجاد" data-en-placeholder="e.g. 3 carpets" placeholder="مثال: 3 سجاد"></div>
+        <div class="field"><label data-ar="المقاسات التقريبية" data-en="Approximate sizes">المقاسات التقريبية</label><input type="text" id="qSize" data-ar-placeholder="مثال: 2×3 م" data-en-placeholder="e.g. 2×3 m" placeholder="مثال: 2×3 م"></div>
+      </div>
+      <div class="field"><label data-ar="ملاحظات إضافية" data-en="Additional notes">ملاحظات إضافية</label><textarea rows="3" id="qNotes" data-ar-placeholder="أي تفاصيل تودّ إضافتها" data-en-placeholder="Anything else we should know" placeholder="أي تفاصيل تودّ إضافتها"></textarea></div>
+      <p class="upload-hint" id="uploadHint" data-ar="ملاحظة: بعد فتح محادثة واتساب، أرفق صور القطع مباشرة هناك." data-en="Note: after the WhatsApp chat opens, upload the item photos directly there.">ملاحظة: بعد فتح محادثة واتساب، أرفق صور القطع مباشرة هناك.</p>
+      <button type="button" class="quote-submit" id="quoteSubmit" data-ar="أرسل طلب عرض السعر" data-en="Send quote request">أرسل طلب عرض السعر</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="final-cta">
+  <div class="wrap">
+    <h2 data-ar="جاهز لاستعادة نظافة سجادك؟" data-en="Ready to bring your carpet back to life?">جاهز لاستعادة نظافة سجادك؟</h2>
+    <p data-ar="اترك لنا مهمة التنظيف واستمتع بمفروشات أكثر نظافة وانتعاشًا." data-en="Leave the cleaning to us, and enjoy fresher, cleaner fabrics.">اترك لنا مهمة التنظيف واستمتع بمفروشات أكثر نظافة وانتعاشًا.</p>
+    <div class="hero-actions">
+      <a href="#quote" class="btn btn-cream" data-ar="اطلب الخدمة الآن" data-en="Book a service">اطلب الخدمة الآن</a>
+      <a href="#contact" class="btn btn-outline" data-ar="تواصل عبر واتساب" data-en="Message on WhatsApp">تواصل عبر واتساب</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<div class="sadu-strip sadu-strip--dark"></div>
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4 data-ar="ليم برو كلين" data-en="Leem Pro Clean">ليم برو كلين</h4>
+        <p data-ar="متخصصون في غسيل السجاد والموكيت والمفروشات، نقدّم حلول تنظيف احترافية للأفراد والمنشآت." data-en="Specialists in carpet, carpet-tile and upholstery cleaning, offering professional solutions for homes and businesses.">متخصصون في غسيل السجاد والموكيت والمفروشات، نقدّم حلول تنظيف احترافية للأفراد والمنشآت.</p>
+      </div>
+      <div>
+        <h4 data-ar="الخدمات" data-en="Services">الخدمات</h4>
+        <a href="#services" data-ar="غسيل السجاد" data-en="Carpet cleaning">غسيل السجاد</a>
+        <a href="#services" data-ar="غسيل الموكيت" data-en="Carpet-tile cleaning">غسيل الموكيت</a>
+        <a href="#services" data-ar="تنظيف المفروشات" data-en="Upholstery cleaning">تنظيف المفروشات</a>
+        <a href="#services" data-ar="إزالة البقع" data-en="Stain removal">إزالة البقع</a>
+        <a href="#services" data-ar="إزالة الروائح" data-en="Odour removal">إزالة الروائح</a>
+        <a href="#services" data-ar="التعقيم" data-en="Sanitizing">التعقيم</a>
+      </div>
+      <div>
+        <h4 data-ar="تواصل معنا" data-en="Contact">تواصل معنا</h4>
+        <a href="#contact"><span data-ar="الهاتف:" data-en="Phone:">الهاتف:</span> +966 5X XXX XXXX</a>
+        <a href="#contact"><span data-ar="واتساب:" data-en="WhatsApp:">واتساب:</span> +966 5X XXX XXXX</a>
+        <a href="#contact">info@example.com</a>
+        <a href="#contact" data-ar="الرياض – المملكة العربية السعودية" data-en="Riyadh, Saudi Arabia">الرياض – المملكة العربية السعودية</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-ar="© 2026 ليم برو كلين – جميع الحقوق محفوظة." data-en="© 2026 Leem Pro Clean. All rights reserved.">© 2026 ليم برو كلين – جميع الحقوق محفوظة.</span>
+      <span data-ar="نظافة احترافية… وعناية تستحقها مفروشاتك." data-en="Professional cleaning. Care your fabrics deserve.">نظافة احترافية… وعناية تستحقها مفروشاتك.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
