@@ -134,8 +134,7 @@
   .eyebrow span{font-family:'Cairo',sans-serif;font-weight:700;font-size:13.5px;color:var(--rust);letter-spacing:.3px;}
   .hero h1{font-size:clamp(32px,5vw,52px);font-weight:900;color:#fff;max-width:16ch;}
   .hero .accent{color:var(--rust);}
-  .hero .accent{color:var(--rust);}
-.hero .accent-white{color:#fff;}
+  .hero .accent-white{color:#fff;}
   .hero-sub{margin-top:22px;font-size:17.5px;line-height:1.9;color:rgba(255,255,255,0.78);max-width:46ch;}
   .hero-actions{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap;}
   .btn{
@@ -161,7 +160,18 @@
 
   /* ---------- section shell ---------- */
   section{padding:84px 0;}
-  .section-tight{padding:60px 0; background-image: url('assets/flags.png'); background-size:contain; background-position: center;}
+  .section-tight{padding:60px 0; position:relative; overflow:hidden;}
+  .section-tight::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:url('Assets/flags.png');
+    background-size:cover;
+    background-position:center;
+    opacity:0.12;
+    z-index:0;
+  }
+  .section-tight > .wrap{position:relative;z-index:1;}
   .kicker{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
   .kicker .diamond{width:13px;height:13px;color:var(--rust);flex:none;}
   .kicker span{font-family:'Cairo',sans-serif;font-weight:700;color:var(--accent-text);font-size:13.5px;}
@@ -290,15 +300,19 @@
   .pillar-card p{font-size:15px;color:#3d3527;}
 
   /* ---------- faq ---------- */
-.faq-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(200px, 280px);gap:40px;align-items:start;grid-template-areas:"list visual";}
-.faq-visual{grid-area:visual;}
-.faq-visual img{width:100%;height:auto;display:block;border-radius:8px;box-shadow:0 18px 40px rgba(15,23,42,0.12);}
-.faq-list{grid-area:list;border-top:1px solid var(--line);max-width:none;}
-@media(max-width:800px){
-  .faq-layout{grid-template-columns:1fr;grid-template-areas:"visual" "list";}
-  .faq-visual, .faq-list{grid-area:initial;}
-  .faq-visual img{max-width:220px;margin:0 auto;}
-}
+  /* Same auto-mirroring pattern as .process-layout: declare column order once
+     and let CSS Grid swap sides automatically between RTL and LTR.
+     Arabic (rtl): flag on the left, questions on the right.
+     English (ltr): questions on the left, flag on the right. */
+  .faq-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(200px, 280px);gap:40px;align-items:start;grid-template-areas:"list visual";}
+  .faq-visual{grid-area:visual;}
+  .faq-visual img{width:100%;height:auto;display:block;border-radius:8px;box-shadow:0 18px 40px rgba(15,23,42,0.12);}
+  .faq-list{grid-area:list;border-top:1px solid var(--line);max-width:none;}
+  @media(max-width:800px){
+    .faq-layout{grid-template-columns:1fr;grid-template-areas:"visual" "list";}
+    .faq-visual, .faq-list{grid-area:initial;}
+    .faq-visual img{max-width:220px;margin:0 auto;}
+  }
   details{border-bottom:1px solid var(--line);padding:22px 0;}
   summary{
     cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;
