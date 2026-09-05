@@ -161,16 +161,6 @@
   /* ---------- section shell ---------- */
   section{padding:84px 0;}
   .section-tight{padding:60px 0; position:relative; overflow:hidden;}
-  .section-tight::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background-image:url('Assets/flags.png');
-    background-size:cover;
-    background-position:center;
-    opacity:0.12;
-    z-index:0;
-  }
   .section-tight > .wrap{position:relative;z-index:1;}
   .kicker{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
   .kicker .diamond{width:13px;height:13px;color:var(--rust);flex:none;}
@@ -180,7 +170,18 @@
   .section-head p{margin-top:16px;color:var(--muted);font-size:16.5px;}
 
   .band-cream{background:var(--cream);}
-  .band-ink{background:var(--ink);color:#fff;}
+  .band-ink{background:var(--ink);color:#fff;position:relative;overflow:hidden;}
+.band-ink::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:url('Assets/flags.png');
+  background-size:cover;
+  background-position:center;
+  opacity:0.12;
+  z-index:0;
+}
+.band-ink > .wrap{position:relative;z-index:1;}
   .band-ink h2, .band-ink h3, .band-ink .kicker span{color:#fff;}
   .band-ink .kicker span{color:var(--rust);}
   .band-ink .kicker .diamond{color:var(--rust);}
@@ -213,10 +214,7 @@
   .service-link:hover{color:var(--ochre);}
 
   /* ---------- process ---------- */
-  /* Grid columns swap sides automatically between RTL and LTR (like flexbox rows do),
-     so we only need to declare the order once — steps first (flexible), visual second (fixed width).
-     In Arabic (rtl) this puts the image on the left and steps on the right.
-     In English (ltr) this puts steps on the left and the image on the right. */
+
   .process-layout{display:grid;grid-template-columns:minmax(0, 1fr) minmax(260px, 430px);gap:34px;align-items:center;grid-template-areas:"steps visual";}
   .process-visual{display:flex;justify-content:center;align-items:center;grid-area:visual;}
   .process-visual img{
@@ -244,18 +242,48 @@
     .process-visual img{max-width:560px;}
   }
 
-  /* ---------- care banner ---------- */
-  .care-banner{
-    display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;
-    background:var(--ochre);color:#fff;padding:42px 46px;
-  }
-  @media(max-width:700px){.care-banner{grid-template-columns:1fr;text-align:center;}}
-  .care-banner h2{font-size:25px;color:#fff;}
-  .care-banner p{margin-top:12px;color:rgba(255,255,255,0.82);font-size:16px;max-width:52ch;}
-  @media(max-width:700px){.care-banner p{margin-inline:auto;}}
-  .care-banner .btn-dark{border-color:#fff;color:#fff;}
-  .care-banner .btn-dark:hover{background:#fff;color:var(--ochre);}
+/* ---------- care banner ---------- */
+.care-banner{
+  display:flex;justify-content:center;gap:100px;align-items:center;
+  background:var(--ochre);color:#fff;padding:42px 46px;
+}
+@media(max-width:600px){.care-banner{flex-direction:column;text-align:center;}}
 
+.care-banner > div:first-child{
+  flex:0 1 auto;
+  max-width:52ch;
+}
+
+.care-banner h2{font-size:25px;color:#fff;}
+.care-banner p{margin-top:12px;color:rgba(255,255,255,0.82);font-size:16px;}
+@media(max-width:600px){.care-banner p{margin-inline:auto;}}
+
+.care-banner-visual{
+  position:relative;
+  width:260px;
+  height:200px;
+  border-radius:8px;
+  overflow:hidden;
+  flex:none;
+}
+.care-banner-visual img{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+.care-banner-visual .btn{
+  position:absolute;
+  bottom:6px;
+  left:50%;
+  transform:translateX(-50%);
+  white-space:nowrap;
+}
+@media(max-width:600px){
+  .care-banner-visual{width:100%;max-width:320px;margin:0 auto;}
+}
+
+/* --- image left in Arabic (RTL), image right in English (LTR) --- */
+[dir="rtl"] .care-banner-visual{ order:-1; }
+[dir="ltr"] .care-banner-visual{ order:1; }
+ 
   /* ---------- segments ---------- */
   .segment-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
   @media(max-width:900px){.segment-grid{grid-template-columns:repeat(2,1fr);}}
@@ -300,10 +328,7 @@
   .pillar-card p{font-size:15px;color:#3d3527;}
 
   /* ---------- faq ---------- */
-  /* Same auto-mirroring pattern as .process-layout: declare column order once
-     and let CSS Grid swap sides automatically between RTL and LTR.
-     Arabic (rtl): flag on the left, questions on the right.
-     English (ltr): questions on the left, flag on the right. */
+ 
   .faq-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(200px, 280px);gap:40px;align-items:start;grid-template-areas:"list visual";}
   .faq-visual{grid-area:visual;}
   .faq-visual img{width:100%;height:auto;display:block;border-radius:8px;box-shadow:0 18px 40px rgba(15,23,42,0.12);}
