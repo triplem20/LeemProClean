@@ -1,6 +1,6 @@
 
   var currentLang = 'ar';
-  var CONTACT_PHONE = '+966508428794';
+  var CONTACT_PHONE = '+966555636670';
 
   var TITLES = {
     ar: 'ليم برو كلين | غسيل سجاد وموكيت في الرياض',
