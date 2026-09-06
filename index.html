@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title id="pageTitle">ليم برو كلين | غسيل سجاد وموكيت في الرياض</title>
 <meta id="pageDesc" name="description" content="شركة متخصصة في غسيل السجاد والموكيت والمفروشات في الرياض. خدمات تنظيف احترافية، معالجة البقع والروائح، التعقيم، والاستلام والتوصيل.">
-<meta name="color-scheme" content="light only">
+<meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
 <header>
   <div class="wrap nav">
     <div class="brand">
-      <img class="brand-mark" src="Assets/Logonobg.png" alt="Leem Pro Clean — شركة ليم برو كلين">
+      <img class="brand-mark" src="Assets/Logo.png" data-src-dark="Assets/Logo-dark.png" alt="Leem Pro Clean — شركة ليم برو كلين">
     </div>
     <nav>
       <ul class="nav-center" id="navLinks">
@@ -33,6 +33,10 @@
       </ul>
     </nav>
     <div class="nav-right">
+      <button type="button" id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 14.6A8.5 8.5 0 019.4 3.5a.6.6 0 00-.7-.8 9.7 9.7 0 1013.6 13.6.6.6 0 00-.8-.7z"/></svg>
+      </button>
       <div class="lang-toggle">
         <button type="button" id="btnAr" class="active">AR</button>
         <button type="button" id="btnEn">EN</button>
@@ -59,7 +63,7 @@
       <div class="hero-art">
        <h2 class="accent" data-ar="نقاء تلمسه..." data-en="Purity you can feel...">نقاء تلمسه...</h2>
 <h2 class="accent-white" data-ar="و اهتمام تثق به" data-en="and care you can trust">و اهتمام تثق به</h2>
-        <img src="Assets/hero-carpet.png" alt="غسيل السجاد والموكيت والمفروشات" width="100%" height="auto">
+        <img src="Assets/hero-carpet.png" data-src-dark="Assets/hero-carpet-dark.png" alt="غسيل السجاد والموكيت والمفروشات" width="100%" height="auto">
       
     </div>
   </div>
@@ -161,7 +165,7 @@
     </div>
     <div class="process process-layout">
       <div class="process-visual">
-        <img src="Assets/service1.png" alt="خدمة غسيل السجاد والموكيت والمفروشات" width="560" height="420">
+        <img src="Assets/service1.png" data-src-dark="Assets/service1-dark.png" alt="خدمة غسيل السجاد والموكيت والمفروشات" width="560" height="420">
       </div>
       <div class="process-steps">
         <div class="process-line"></div>
@@ -206,7 +210,7 @@
     <p data-ar="من لحظة استلام القطعة، نتعامل معها بعناية ومسؤولية. هدفنا ليس فقط أن يبدو السجاد نظيفًا، بل أن تحصل على تجربة تنظيف متكاملة واحترافية." data-en="From the moment we collect your piece, we handle it with care and responsibility. Our goal isn't just a clean-looking carpet — it's a complete, professional cleaning experience.">من لحظة استلام القطعة، نتعامل معها بعناية ومسؤولية. هدفنا ليس فقط أن يبدو السجاد نظيفًا، بل أن تحصل على تجربة تنظيف متكاملة واحترافية.</p>
   </div>
   <div class="care-banner-visual">
-    <img src="Assets/service2.png" alt="">
+    <img src="Assets/service2.png" data-src-dark="Assets/service2-dark.png" alt="">
     <a href="#quote" class="btn btn-cream" data-ar="اطلب خدمتك الآن" data-en="Book now">اطلب خدمتك الآن</a>
   </div>
 </div>
@@ -234,7 +238,7 @@
 <section>
   <div class="wrap pickup">
     <div class="pickup-art">
-        <img src="Assets/pickup.png" alt="خدمة الاستلام والتوصيل" >
+        <img src="Assets/pickup.png" data-src-dark="Assets/pickup-dark.png" alt="خدمة الاستلام والتوصيل" >
     </div>
     <div>
       <div class="kicker"><svg class="diamond" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 3.4 7.6 8 8.2-4.6.6-7.4 3.4-8 8.2-.6-4.8-3.4-7.6-8-8.2 4.6-.6 7.4-3.4 8-8.2z"/></svg><span data-ar="الاستلام والتوصيل" data-en="Pickup &amp; delivery">الاستلام والتوصيل</span></div>
@@ -306,7 +310,7 @@
     </div>
     <div class="faq-layout">
   <div class="faq-visual">
-    <img src="Assets/flag.png" alt="Saudi Arabia flag">
+    <img src="Assets/flag.png" data-src-dark="Assets/flag-dark.png" alt="Saudi Arabia flag">
   </div>
   <div class="faq-list">
    <div class="faq-list">
@@ -359,23 +363,26 @@
       <div class="contact-list">
         <div class="contact-row">
           <svg class="contact-icon" viewBox="0 0 24 24" fill="none"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 005 5L14 13l5 2v3a2 2 0 01-2 2A15 15 0 015 6a2 2 0 012-2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-          <div><span class="label" data-ar="الهاتف" data-en="Phone">الهاتف</span><span class="value">+966 5X XXX XXXX</span></div>
+          <div><span class="label" data-ar="الهاتف" data-en="Phone">الهاتف</span><span class="value">+966555636670</span></div>
         </div>
         <div class="contact-row">
           <svg class="contact-icon" viewBox="0 0 24 24" fill="none"><path d="M4 20l1.4-4.2A8 8 0 1111 20.8L4 20z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-          <div><span class="label" data-ar="واتساب" data-en="WhatsApp">واتساب</span><span class="value">+966 5X XXX XXXX</span></div>
+          <div><span class="label" data-ar="واتساب" data-en="WhatsApp">واتساب</span><span class="value">+966555636670</span></div>
         </div>
         <div class="contact-row">
           <svg class="contact-icon" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.6"/></svg>
-          <div><span class="label" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</span><span class="value">info@example.com</span></div>
+          <div><span class="label" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</span><span class="value">info@leemproclean.com</span></div>
         </div>
         <div class="contact-row">
-          <svg class="contact-icon" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
-          <div><span class="label" data-ar="موقعنا" data-en="Location">موقعنا</span><span class="value" data-ar="الرياض – المملكة العربية السعودية" data-en="Riyadh, Saudi Arabia">الرياض – المملكة العربية السعودية</span></div>
-        </div>
+  <svg class="contact-icon" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+  <a href="https://www.google.com/maps?q=24.52040672302246,46.899234771728516&z=17&hl=en" target="_blank" rel="noopener">
+    <span class="label" data-ar="موقعنا" data-en="Location">موقعنا</span>
+    <span class="value" data-ar="الرياض – المملكة العربية السعودية" data-en="Riyadh, Saudi Arabia">الرياض – المملكة العربية السعودية</span>
+  </a>
+</div>
         <div class="contact-row">
           <svg class="contact-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div><span class="label" data-ar="ساعات العمل" data-en="Working hours">ساعات العمل</span><span class="value" data-ar="يوميًا 9 ص – 10 م" data-en="Daily, 9 AM – 10 PM">يوميًا 9 ص – 10 م</span></div>
+          <div><span class="label" data-ar="ساعات العمل" data-en="Working hours">ساعات العمل</span><span class="value" data-ar="السبت - الخميس 10 ص – 10 م" data-en="Saturday - Thursday, 10 AM – 10 PM">السبت - الخميس 10 ص – 10 م</span></div>
         </div>
       </div>
     </div>

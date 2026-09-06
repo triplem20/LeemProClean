@@ -1,6 +1,41 @@
-
-  var currentLang = 'ar';
+var currentLang = 'ar';
   var CONTACT_PHONE = '+966555636670';
+
+  /* ---------- dark mode ---------- */
+  var THEME_KEY = 'lpc-theme';
+
+  function setImagesForTheme(theme){
+    document.querySelectorAll('img[data-src-dark]').forEach(function(img){
+      if(!img.dataset.srcLight){ img.dataset.srcLight = img.getAttribute('src'); }
+      var target = theme === 'dark' ? img.dataset.srcDark : img.dataset.srcLight;
+      if(img.getAttribute('src') === target) return;
+      img.onerror = function(){
+        img.onerror = null;
+        img.src = img.dataset.srcLight;
+      };
+      img.src = target;
+    });
+  }
+
+  function applyTheme(theme){
+    document.getElementById('htmlRoot').setAttribute('data-theme', theme);
+    setImagesForTheme(theme);
+    try{ localStorage.setItem(THEME_KEY, theme); }catch(e){}
+  }
+
+  function initTheme(){
+    var saved = null;
+    try{ saved = localStorage.getItem(THEME_KEY); }catch(e){}
+    var theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    applyTheme(theme);
+  }
+
+  initTheme();
+
+  document.getElementById('themeToggle').addEventListener('click', function(){
+    var current = document.getElementById('htmlRoot').getAttribute('data-theme');
+    applyTheme(current === 'dark' ? 'light' : 'dark');
+  });
 
   var TITLES = {
     ar: 'ليم برو كلين | غسيل سجاد وموكيت في الرياض',
