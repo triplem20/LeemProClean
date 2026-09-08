@@ -413,10 +413,10 @@ html[data-theme="dark"]{ --flags-img:url('Assets/flags-dark.png'); }
 .social-links a{
   display:flex;align-items:center;justify-content:center;
   width:34px;height:34px;border-radius:50%;
-  border:1px solid var(--line);color:var(--charcoal);
-  transition:border-color .2s ease, color .2s ease, transform .2s ease;
+  background:var(--line-soft);color:var(--muted);
+  transition:background .2s ease, color .2s ease, transform .2s ease;
 }
-.social-links a:hover{border-color:var(--rust);color:var(--rust);transform:translateY(-2px);}
+.social-links a:hover{background:var(--rust);color:#fff;transform:translateY(-2px);}
 .social-links svg{width:16px;height:16px;}
   .quote-form{background:var(--cream);padding:38px; background-image: var(--quote-bg-img, url(Assets/formbg.png)); background-size: cover; background-position: center;}
   html[data-theme="dark"] .quote-form{ --quote-bg-img: url(Assets/formbg-dark.png); }
