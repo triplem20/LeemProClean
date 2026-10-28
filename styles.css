@@ -447,3 +447,24 @@ html[data-theme="dark"]{ --flags-img:url('Assets/flags-dark.png'); }
   .footer-bottom{display:flex;justify-content:space-between;padding-top:22px;font-size:13px;color:rgba(255,255,255,0.42);flex-wrap:wrap;gap:10px;}
 
   ::selection{background:var(--rust);color:var(--ink);}
+
+
+  .policy-link{
+  background:none;border:none;padding:0;cursor:pointer;
+  color:var(--accent-text);font-family:'Cairo',sans-serif;font-size:13.5px;
+  font-weight:700;text-decoration:underline;
+}
+.policy-dialog{
+  width:min(560px,90vw);max-height:80vh;border:none;border-radius:12px;
+  padding:0;background:var(--paper);color:var(--charcoal);
+}
+.policy-dialog::backdrop{background:rgba(0,0,0,0.5);}
+.policy-dialog-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 22px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--paper);
+}
+.policy-dialog-head h3{font-size:18px;color:var(--charcoal);}
+.policy-close{background:none;border:none;font-size:24px;line-height:1;color:var(--muted);cursor:pointer;}
+.policy-dialog-body{padding:18px 22px 26px;overflow-y:auto;}
+.policy-dialog-body h4{font-size:15.5px;color:var(--charcoal);margin-top:16px;}
+.policy-dialog-body p{font-size:14.5px;color:var(--muted);margin-top:6px;}

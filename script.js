@@ -108,3 +108,14 @@ var currentLang = 'ar';
     var message = encodeURIComponent(messageText);
     window.open('https://wa.me/' + CONTACT_PHONE + '?text=' + message, '_blank');
   });
+
+  var policyDialog = document.getElementById('policyDialog');
+document.getElementById('policyLink').addEventListener('click', function(){
+  policyDialog.showModal();
+});
+document.getElementById('policyClose').addEventListener('click', function(){
+  policyDialog.close();
+});
+policyDialog.addEventListener('click', function(e){
+  if(e.target === policyDialog) policyDialog.close();
+});

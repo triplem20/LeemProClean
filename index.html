@@ -435,8 +435,14 @@
         <div class="field"><label data-ar="عدد القطع" data-en="Number of pieces">عدد القطع</label><input type="text" id="qCount" data-ar-placeholder="مثال: 3 سجاد" data-en-placeholder="e.g. 3 carpets" placeholder="مثال: 3 سجاد"></div>
         <div class="field"><label data-ar="المقاسات التقريبية" data-en="Approximate sizes">المقاسات التقريبية</label><input type="text" id="qSize" data-ar-placeholder="مثال: 2×3 م" data-en-placeholder="e.g. 2×3 m" placeholder="مثال: 2×3 م"></div>
       </div>
+     
+
       <div class="field"><label data-ar="ملاحظات إضافية" data-en="Additional notes">ملاحظات إضافية</label><textarea rows="3" id="qNotes" data-ar-placeholder="أي تفاصيل تودّ إضافتها" data-en-placeholder="Anything else we should know" placeholder="أي تفاصيل تودّ إضافتها"></textarea></div>
       <p class="upload-hint" id="uploadHint" data-ar="ملاحظة: بعد فتح محادثة واتساب، أرفق صور القطع مباشرة هناك." data-en="Note: after the WhatsApp chat opens, upload the item photos directly there.">ملاحظة: بعد فتح محادثة واتساب، أرفق صور القطع مباشرة هناك.</p>
+       <p class="policy-note" style="margin-top:14px;font-size:13.5px;color:var(--muted);">
+  <span data-ar="بالضغط على زر الإرسال، أنت توافق على" data-en="By clicking submit, you agree to our">بالضغط على زر الإرسال، أنت توافق على</span>
+  <button type="button" id="policyLink" class="policy-link" data-ar="سياسة التعويض عن التلف والفقد" data-en="Damage & Loss Compensation Policy">سياسة التعويض عن التلف والفقد</button>
+</p>
       <button type="button" class="quote-submit" id="quoteSubmit" data-ar="أرسل طلب عرض السعر" data-en="Send quote request">أرسل طلب عرض السعر</button>
     </div>
   </div>
@@ -486,6 +492,35 @@
     </div>
   </div>
 </footer>
+
+<dialog id="policyDialog" class="policy-dialog">
+  <div class="policy-dialog-head">
+    <h3 data-ar="سياسة التعويض عن التلف والفقد" data-en="Damage & Loss Compensation Policy">سياسة التعويض عن التلف والفقد</h3>
+    <button type="button" id="policyClose" class="policy-close" aria-label="Close">&times;</button>
+  </div>
+  <div class="policy-dialog-body">
+    <p data-ar="تحرص شركة ليم برو كلين على المحافظة على ممتلكات عملائها وتقديم خدمات الغسيل والتنظيف وفق أعلى معايير العناية المهنية." data-en="Leem Pro Clean is committed to safeguarding our customers' property and delivering washing and cleaning services to the highest standards of professional care.">تحرص شركة ليم برو كلين على المحافظة على ممتلكات عملائها وتقديم خدمات الغسيل والتنظيف وفق أعلى معايير العناية المهنية.</p>
+
+    <p data-ar="في حال ثبوت تعرض السجاد أو الموكيت أو البطانيات أو المفارش للتلف أو الفقد نتيجة خطأ أو إهمال من جانب الشركة، تلتزم الشركة بتعويض العميل وفق الضوابط التالية:" data-en="If it is established that a carpet, carpet-tile, blanket, or rug was damaged or lost due to an error or negligence on the company's part, the company commits to compensating the customer according to the following terms:">في حال ثبوت تعرض السجاد أو الموكيت أو البطانيات أو المفارش للتلف أو الفقد نتيجة خطأ أو إهمال من جانب الشركة، تلتزم الشركة بتعويض العميل وفق الضوابط التالية:</p>
+
+    <h4 data-ar="التلف الجزئي" data-en="Partial Damage">التلف الجزئي</h4>
+    <p data-ar="تتحمل الشركة تكاليف إصلاح الضرر متى كان الإصلاح ممكنًا، أو تعويض العميل بما يتناسب مع الضرر الفعلي." data-en="The company covers repair costs where repair is feasible, or compensates the customer in proportion to the actual damage.">تتحمل الشركة تكاليف إصلاح الضرر متى كان الإصلاح ممكنًا، أو تعويض العميل بما يتناسب مع الضرر الفعلي.</p>
+
+    <h4 data-ar="التلف الكلي أو الفقد" data-en="Total Damage or Loss">التلف الكلي أو الفقد</h4>
+    <p data-ar="يتم تعويض العميل وفق القيمة السوقية العادلة للقطعة وقت وقوع الضرر، مع مراعاة عمرها وحالتها ونوعها وقيمتها قبل التلف." data-en="The customer is compensated based on the item's fair market value at the time of the damage, taking into account its age, condition, type, and value prior to the damage.">يتم تعويض العميل وفق القيمة السوقية العادلة للقطعة وقت وقوع الضرر، مع مراعاة عمرها وحالتها ونوعها وقيمتها قبل التلف.</p>
+
+    <h4 data-ar="الحالات المستثناة" data-en="Exclusions">الحالات المستثناة</h4>
+    <p data-ar="لا تتحمل الشركة مسؤولية الأضرار الناتجة حصريًا عن العيوب التصنيعية أو ضعف الأنسجة أو الاستهلاك الطبيعي أو التلف السابق للاستلام، متى ثبت عدم تسبب الشركة فيها أو مساهمتها في حدوثها." data-en="The company is not liable for damage arising solely from manufacturing defects, fabric weakness, normal wear, or pre-existing damage prior to pickup, where it is established that the company did not cause or contribute to it.">لا تتحمل الشركة مسؤولية الأضرار الناتجة حصريًا عن العيوب التصنيعية أو ضعف الأنسجة أو الاستهلاك الطبيعي أو التلف السابق للاستلام، متى ثبت عدم تسبب الشركة فيها أو مساهمتها في حدوثها.</p>
+
+    <h4 data-ar="تقديم المطالبة" data-en="Submitting a Claim">تقديم المطالبة</h4>
+    <p data-ar="يُرجى من العميل الإبلاغ عن أي تلف فور اكتشافه، مع تقديم رقم الطلب وصور الضرر إن توفرت، لإجراء الفحص والتحقق من المطالبة." data-en="Customers are asked to report any damage as soon as it is discovered, providing the order number and photos of the damage if available, to allow inspection and verification of the claim.">يُرجى من العميل الإبلاغ عن أي تلف فور اكتشافه، مع تقديم رقم الطلب وصور الضرر إن توفرت، لإجراء الفحص والتحقق من المطالبة.</p>
+
+    <h4 data-ar="تقدير التعويض" data-en="Compensation Assessment">تقدير التعويض</h4>
+    <p data-ar="يخضع التعويض لتقييم الضرر الفعلي والمستندات المتاحة، مع احتفاظ العميل بحقوقه المقررة بموجب الأنظمة المعمول بها في المملكة العربية السعودية." data-en="Compensation is subject to an assessment of the actual damage and available documentation, and the customer retains all rights established under the laws applicable in the Kingdom of Saudi Arabia.">يخضع التعويض لتقييم الضرر الفعلي والمستندات المتاحة، مع احتفاظ العميل بحقوقه المقررة بموجب الأنظمة المعمول بها في المملكة العربية السعودية.</p>
+
+    <p data-ar="تلتزم شركة ليم برو كلين بمعالجة مطالبات التعويض بكل شفافية وعدالة، بما يحفظ حقوق العملاء والشركة." data-en="Leem Pro Clean is committed to handling compensation claims with full transparency and fairness, preserving the rights of both customers and the company.">تلتزم شركة ليم برو كلين بمعالجة مطالبات التعويض بكل شفافية وعدالة، بما يحفظ حقوق العملاء والشركة.</p>
+  </div>
+</dialog>
 
 <script src="script.js"></script>
 </body>
